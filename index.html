@@ -139,22 +139,6 @@
   };
   navigator.share(shareData);
 }
-
-  if (navigator.canShare && navigator.canShare(shareData)) {
-    try {
-      await navigator.share({
-        files,
-        title: "Images",
-        text: "Beautiful images",
-      });
-      output.textContent = "Shared!";
-    } catch (error) {
-      output.textContent = `Error: ${error.message}`;
-    }
-  } else {
-    output.textContent = `Your system doesn't support sharing these files.`;
-  }
-});
-    </script>
+</script>
 </body>
 </html>
