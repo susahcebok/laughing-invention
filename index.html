@@ -16,11 +16,6 @@
 <main>
 <h2>Profile Pic Generator</h2>
 <p>Upload foto terbaik Anda yang ingin di jadikan profile lalu klik 'Unduh!'.</p>
-
-<p>
-<!--<input id="fileInput" type="file" accept="image/*">-->
-<input type="file" id="fileInput" name="files" style="display: none;" accept="image/*">
-</p>
     
 <p> 
 <img id="preview" src="prev.png" alt="Preview Twibbon"/>
@@ -29,6 +24,7 @@
 </p>
 
 <p>
+<input type="file" id="fileInput" name="files" style="display: none;" accept="image/*">
 <button class="upload" id="fileInput" onclick="$('#fileInput').click()">Upload Foto</button>
 <button class="btn" id="submit" onclick="drawImage()" disabled>Unduh</button>
 <span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
