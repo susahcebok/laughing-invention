@@ -109,9 +109,34 @@
 <output id="output"></output>
 </p>
 -->
+
+<p>
+<button class="btn" id="submit" onclick="shareCanvas()" disabled>Unduh</button>
+</p>
 </main>
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="share.js"></script>
+    <script>
+        async function shareCanvas() {
+  const canvasElement = document.getElementById('mycanvasid');
+  const dataUrl = canvasElement.toDataURL();
+  const blob = await (await fetch(dataUrl)).blob();
+  const filesArray = [
+    new File(
+      [blob],
+      'animation.png',
+      {
+        type: blob.type,
+        lastModified: new Date().getTime()
+      }
+    )
+  ];
+  const shareData = {
+    files: filesArray,
+  };
+  navigator.share(shareData);
+}
+    </script>
 </body>
 </html>
