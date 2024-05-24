@@ -1,4 +1,4 @@
-const input = document.getElementById("files");
+const input = document.getElementById("fileInput");
 const output = document.getElementById("output");
 
 document.getElementById("share").addEventListener("click", async () => {
