@@ -1,8 +1,8 @@
-const input = document.getElementById("fileInput");
+const canvas = document.getElementById("cvs");
 const output = document.getElementById("output");
 
 document.getElementById("share").addEventListener("click", async () => {
-  const files = input.files;
+  const files = canvas.files;
 
   if (files.length === 0) {
     output.textContent = "No files selected.";
