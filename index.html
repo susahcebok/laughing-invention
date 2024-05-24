@@ -46,10 +46,10 @@
 <h2>Twibbon Generator</h2>
 <p>Upload gambar yang ingin di jadikan twibbon lalu klik 'Buat twibbon!'.</p>
 
-<p>Pastikan gambar yang di upload memiliki ukuran.</p>
-<br/>
+<p>
 <input id="fileInput" type="file" accept="image/*">
-
+</p>
+    
 <p> 
 <img id="preview" src="preview.png" alt="Preview Twibbon"/>
 <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
@@ -59,6 +59,9 @@
 <p>
 <button id="submit" onclick="drawImage()" disabled>Unduh</button>
 <span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
+</p>
+
+<p>
 <button id="share">Share</button>
 </p>
 
