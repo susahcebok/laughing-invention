@@ -147,7 +147,7 @@
     return;
   }
 
-  if (navigator.canShare({ files })) {
+  if (navigator.canShare && navigator.canShare(shareData)) {
     try {
       await navigator.share({
         files,
