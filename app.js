@@ -18,7 +18,10 @@ function drawImage() {
   var context = canvas.getContext('2d');
   var hasil = document.getElementById("result");
   hasil.innerHTML = "<p>Klik kanan dan save untuk PC atau sentuh dan tahan lalu unduh untuk smartphone.</p> Jika unduhan tidak dimulai, ";
+  var share = document.getElementById("share");
+  share.innerHTML = "<p><button id="cvs" onclick="shareCanvas()">Share</button></p>";
 
+  
   canvas.width = 1024;
   canvas.height = 1024;
   context.drawImage(picture, 0, 0, canvas.width, canvas.height);
