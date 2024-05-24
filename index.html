@@ -140,7 +140,7 @@ const btn = document.querySelector("button");
 const resultPara = document.querySelector(".result");
 
 // Share must be triggered by "user activation"
-btn.addEventListener("click", async () => {
+btn.addEventListener("click", shareCanvas() => {
   try {
     await navigator.share(shareData);
     resultPara.textContent = "MDN shared successfully";
