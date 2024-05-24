@@ -1,33 +1,22 @@
-const input = document.getElementById("fileInput");
-const output = document.getElementById("output");
-
-document.getElementById("share").addEventListener("click", async () => {
-  const files = input.files;
-
-  if (files.length === 0) {
-    output.textContent = "No files selected.";
-    return;
-  }
-
-  // feature detecting navigator.canShare() also implies
-  // the same for the navigator.share()
-  if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`;
-    return;
-  }
-
-  if (navigator.canShare({ files })) {
-    try {
-      await navigator.share({
-        files,
+async function shareCanvas() {
+        const canvas = document.getElementById('cvs');
+        const dataUrl = canvas.toDataURL();
+        const blob = await (await fetch(dataUrl)).blob();
+        const filesArray = [
+    new File(
+      [blob],
+      'prev.png',
+      {
+        type: blob.type,
+        lastModified: new Date().getTime()
+      }
+    )
+  ];
+    const shareData = {
+        files: filesArray,
         title: "Profile Pic Generator",
         text: "Profile Pic Generator",
-      });
-      output.textContent = "Shared!";
-    } catch (error) {
-      output.textContent = `Error: ${error.message}`;
+        url: "https://susahcebok.github.io/laughing-invention/",
+  };
+        navigator.share(shareData);
     }
-  } else {
-    output.textContent = `Your system doesn't support sharing these files.`;
-  }
-});
