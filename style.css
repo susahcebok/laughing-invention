@@ -1,0 +1,67 @@
+body {
+background-color: #f0f0f2;
+margin: 0;
+padding: 0;
+font-family: monospace;
+}
+main {
+width: 600px;
+line-height: 1.6;
+margin: 5em auto;
+padding: 4em;
+background-color: #fdfdff;
+border-radius: 0.5em;
+box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+}
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
+}
+img, canvas {
+width: 100%;
+height: auto;
+border-radius: 0.5em;
+}
+button {
+max-width: 100%;
+vertical-align: baseline;
+border-radius: 0.5em;
+border: 0;
+outline: 0;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+.upload::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+.btn {
+padding: 10px 25px;
+margin: 0 0 8px 0;
+display:inline-block;
+background: #ef4e4f;
+color:#fff;
+}
+button:disabled {
+opacity: 0.3;
+cursor: not-allowed;
+}
+button:hover {
+opacity: 0.3; 
+}
+.upload {
+padding: 10px 25px;
+margin: 0 0 8px 0;
+display:inline-block;
+background: #f0f0f2;
+border-radius: 0.5em;
+}
+.upload:hover {
+opacity: 0.3; 
+}
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
+}
