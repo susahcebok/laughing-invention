@@ -102,18 +102,16 @@
 <span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
 </p>
 
-<!--
+
 <p>
 <button id="cvs" onclick="shareCanvas()">Share</button>
 </p>
--->
-<span id="aa">SHARE</span>
-<p id="output"></p>
+
 </main>
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="share.js"></script>
-   <!--
+   
     <script>
     async function shareCanvas() {
         const canvas = document.getElementById('cvs');
@@ -138,41 +136,6 @@
         navigator.share(shareData);
     }
 
-    </script>
-   --> 
-
-    <script>
-        const shareData = {
-  title: "MDN",
-  text: "Learn web development on MDN!",
-  url: "https://developer.mozilla.org",
-};
-
-const btn = document.getElementById('aa');
-const resultPara = document.getElementById('output');
-const canvas = document.getElementById('cvs');
-const dataUrl = canvas.toDataURL();
-        const blob = await (await fetch(dataUrl)).blob();
-        const filesArray = [
-    new File(
-      [blob],
-      'prev.png',
-      {
-        type: blob.type,
-        lastModified: new Date().getTime()
-      }
-    )
-  ];
-    
-// Share must be triggered by "user activation"
-btn.addEventListener("click", async () => {
-  try {
-    await navigator.share(shareData);
-    resultPara.textContent = "MDN shared successfully";
-  } catch (err) {
-    resultPara.textContent = `Error: ${err}`;
-  }
-});
     </script>
     
 </body>
