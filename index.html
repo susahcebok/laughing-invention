@@ -124,30 +124,15 @@
       }
     )
   ];
-//    const shareData = {
-//      files: filesArray,
-//  };
-//        navigator.share(shareData);
-//    }
+    const shareData = {
+      files: filesArray,
+        title: "MDN",
+        text: "Learn web development on MDN!",
+        url: "https://developer.mozilla.org",
+  };
+        navigator.share(shareData);
+    }
 
-        const shareData = {
-  title: "MDN",
-  text: "Learn web development on MDN!",
-  url: "https://developer.mozilla.org",
-};
-
-const btn = document.querySelector("button");
-const resultPara = document.querySelector(".result");
-
-// Share must be triggered by "user activation"
-btn.addEventListener("click", shareCanvas() => {
-  try {
-    await navigator.share(shareData);
-    resultPara.textContent = "MDN shared successfully";
-  } catch (err) {
-    resultPara.textContent = `Error: ${err}`;
-  }
-});
     </script>
 </body>
 </html>
