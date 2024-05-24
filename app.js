@@ -16,6 +16,8 @@ function drawImage() {
   var picture = document.getElementById('preview');
   var canvas = document.getElementById('cvs');
   var context = canvas.getContext('2d');
+  var hasil = document.getElementById("result");
+  hasil.innerHTML = "<p>Terima kasih telah berkontribusi untuk Palestina Merdeka! Upaya Anda sangat dihargai.</p> Jika unduhan tidak dimulai, ";
 
   canvas.width = 1024;
   canvas.height = 1024;
