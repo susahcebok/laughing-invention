@@ -140,13 +140,6 @@
   navigator.share(shareData);
 }
 
-        // feature detecting navigator.canShare() also implies
-  // the same for the navigator.share()
-  if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`;
-    return;
-  }
-
   if (navigator.canShare && navigator.canShare(shareData)) {
     try {
       await navigator.share({
