@@ -3,6 +3,7 @@ const output = document.getElementById("output");
 
 document.getElementById("share").addEventListener("click", async () => {
   const files = input.files;
+  const hasil = canvas.toDataURL("image/png");
 
   if (files.length === 0) {
     output.textContent = "No files selected.";
@@ -16,7 +17,7 @@ document.getElementById("share").addEventListener("click", async () => {
     return;
   }
 
-  if (navigator.canShare({ files })) {
+  if (navigator.canShare({ hasil })) {
     try {
       await navigator.share({
         files,
