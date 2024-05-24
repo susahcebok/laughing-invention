@@ -113,6 +113,7 @@
 <p>
 <button id="cvs" onclick="shareCanvas()">Share</button>
 </p>
+<p id="output"></p>
 </main>
 
     <script type="text/javascript" src="app.js"></script>
@@ -120,6 +121,7 @@
     <script>
         async function shareCanvas() {
   const canvas = document.getElementById('cvs');
+  const output = document.getElementById('output');
   const dataUrl = canvas.toDataURL();
   const blob = await (await fetch(dataUrl)).blob();
   const filesArray = [
