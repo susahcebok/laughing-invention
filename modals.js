@@ -1,4 +1,4 @@
-var btns = document.querySelectorAll(".btn");
+var btns = document.querySelectorAll(".popup");
 for (let b of btns) {
   b.onclick = () => {
     let modal = b.parentElement.querySelector(".modal")
