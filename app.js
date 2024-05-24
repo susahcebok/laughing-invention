@@ -14,7 +14,7 @@ function drawImage() {
   var picture = new Image();
   var twibbon = document.getElementById('twibbon');
   var picture = document.getElementById('preview');
-  var canvas = document.getElementById('twibbonbaker');
+  var canvas = document.getElementById('cvs');
   var context = canvas.getContext('2d');
 
   canvas.width = 1080;
