@@ -35,3 +35,17 @@ function drawImage() {
 $("#fileInput").change(function() {
   readURL(this);
 });
+
+let clickButton = document.getElementById("dpwload");
+let fileInput = document.getElementById("fileInput");
+fileInput.addEventListener("change", function () {
+         
+// check if the file is selected or not
+if (fileInput.files.length == 0) {
+clickButton.disabled = true;
+clickButton.opacity = 0.3;
+} else {
+clickButton.disabled = false;
+clickButton.style.opacity = 1;
+}
+});
