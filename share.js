@@ -2,7 +2,7 @@ const input = document.getElementById("fileInput");
 const output = document.getElementById("output");
 
 document.getElementById("share").addEventListener("click", async () => {
-  const files = input.files;
+//  const files = input.files;
   const hasil = canvas.toDataURL("image/png");
 
   if (files.length === 0) {
