@@ -45,17 +45,16 @@
 <main>
 <h2>Twibbon Generator</h2>
 <p>Upload gambar yang ingin di jadikan twibbon lalu klik 'Buat twibbon!'.</p>
-<p>Klik kanan dan save untuk PC atau sentuh dan tahan lalu download image untuk smartphone.</p>
- 
+
+<p>Pastikan gambar yang di upload memiliki ukuran.</p>
+<br/>
+<input id="fileInput" type="file" accept="image/*">
+
 <p> 
 <img id="preview" src="preview.png" alt="Preview Twibbon"/>
 <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
 <canvas id="cvs" style="display: none"></canvas>
 </p>
-
-<p>Pastikan gambar yang di upload memiliki ukuran</p>
-<br/>
-<input id="fileInput" type="file" accept="image/*">
 
 <p>
 <button id="submit" onclick="drawImage()" disabled>Unduh</button>
