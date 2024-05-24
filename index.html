@@ -107,8 +107,8 @@
 <button id="cvs" onclick="shareCanvas()">Share</button>
 </p>
 -->
-<span>SHARE</span>
-<p class="result"></p>
+<span id="aa">SHARE</span>
+<p id="output"></p>
 </main>
 
     <script type="text/javascript" src="app.js"></script>
@@ -148,9 +148,9 @@
   url: "https://developer.mozilla.org",
 };
 
-const btn = document.querySelector("span");
-const resultPara = document.querySelector(".result");
-const canvas = document.querySelector("cvs");
+const btn = document.getElementById('aa');
+const resultPara = document.getElementById('output');
+const canvas = document.getElementById('cvs');
 const dataUrl = canvas.toDataURL();
         const blob = await (await fetch(dataUrl)).blob();
         const filesArray = [
