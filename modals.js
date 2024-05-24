@@ -1,4 +1,4 @@
-var btns = document.querySelectorAll("btn");
+var btns = document.querySelectorAll(".btn");
 for (let b of btns) {
   b.onclick = () => {
     let modal = b.parentElement.querySelector(".modal")
