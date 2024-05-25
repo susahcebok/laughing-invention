@@ -77,6 +77,7 @@ z-index: 9999;}
 #cookies > p {
 font: normal 10px/16px sans-serif;
 margin: 0 0 10px 0;
+padding: 1em;
 }
   
 #cookies > p a {
