@@ -99,7 +99,17 @@ opacity: 0.3;
   display: inline-block;
   fill: #208798;
 }
-
+@media screen and (max-width: 1024px) {
+  .cookiePolicy {
+    height: auto;
+    padding: 24px 48px;
+    line-height: 1.4;
+  }
+  .cookiePolicy__close {
+    top: 27px;
+    margin: 0;
+  }
+}
 
 @media (max-width: 700px) {
 main {
