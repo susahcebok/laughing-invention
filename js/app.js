@@ -38,6 +38,11 @@ $("#fileInput").change(function() {
   readURL(this);
 });
 
+document.getElementById('fileInput').addEventListener('change', function() {
+  var file = this.files[0];
+  alert('You selected: ' + file.name);
+});
+
 let clickButton = document.getElementById("submit");
 let fileInput = document.getElementById("fileInput");
 fileInput.addEventListener("change", function () {
