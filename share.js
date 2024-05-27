@@ -1,4 +1,5 @@
 async function shareCanvas() {
+        const response = await fetch('prev.png');
         const canvas = document.getElementById('cvs');
         const dataUrl = canvas.toDataURL();
         const blob = await (await fetch(dataUrl)).blob();
