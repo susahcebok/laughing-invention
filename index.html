@@ -22,8 +22,11 @@
     
 <h2>Profile Pic Generator</h2>
 <p>Upload foto terbaik Anda yang ingin di jadikan profile lalu klik 'Unduh!'.</p>
-<p><img src="thumbnail.png" alt="Preview"></p>
 <p>
+<img id="preview" src="prev.png" alt="Preview Twibbon"/>
+<img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
+<canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+</p>
 <input type="file" id="fileInput" name="files" style="display: none;" accept="image/*">
 <button class="upload" id="fileInput" onclick="$('#fileInput').click()">Upload Foto</button>
 <button class="btn" id="submit" onclick="drawImage()" disabled>Unduh</button>
@@ -51,7 +54,7 @@ stroke-width="2"/>
 </div>
 <!-- TO THERE -->
 
-<!-- MODALS -->
+<!-- MODALS
 <div id="custom-modal" class="custom-modal">
 <div class="custom-modal-dialog">
 <div class="custom-modal-content">
@@ -74,7 +77,7 @@ stroke-width="2"/>
 </div>
 </div>
 </div>
-
+-->
 </main>
 
 <script type="text/javascript" src="js/app.js"></script>
