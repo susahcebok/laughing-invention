@@ -35,7 +35,9 @@
 <input type="file" id="fileInput" name="files" style="display: none;" accept="image/*">
 <button class="upload" id="fileInput" onclick="$('#fileInput').click()">Upload Foto</button>
 <button class="btn" id="submit" onclick="drawImage()" disabled>Unduh</button>
+<!--
 <span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
+-->
 </p>
 
 <!--
@@ -81,6 +83,9 @@ stroke-width="2"/>
 <img id="preview" src="prev.png" alt="Preview Twibbon"/>
 <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
 <canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+</p>
+<p>
+<span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
 </p>
 <p>Bagikan Twibbon ini ke media sosial Anda: <span id="cvs" onclick="shareCanvas()"><strong>Share</strong></span></p>
 
