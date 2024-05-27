@@ -17,7 +17,7 @@ function drawImage() {
   var canvas = document.getElementById('cvs');
   var context = canvas.getContext('2d');
   var hasil = document.getElementById("result");
-  hasil.innerHTML = "Jika unduhan tidak dimulai, ";
+  hasil.innerHTML = "<p>Anda berhasil mengunduh! Terima kasih.</p> Jika unduhan tidak dimulai, ";
   
   canvas.width = 1024;
   canvas.height = 1024;
