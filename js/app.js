@@ -34,6 +34,7 @@ function drawImage() {
   $('#unduh').attr('href', hasil);
 }
 
+/*
 $("#fileInput").change(function() {
   readURL(this);
 });
@@ -42,6 +43,11 @@ document.getElementById('fileInput').addEventListener('change', function() {
   var file = this.files[0];
   alert('You selected: ' + file.name);
 });
+*/
+
+$("#fileInput").change(function () {
+$('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
+})
 
 let clickButton = document.getElementById("submit");
 let fileInput = document.getElementById("fileInput");
