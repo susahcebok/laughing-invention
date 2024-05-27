@@ -48,7 +48,7 @@ document.getElementById('fileInput').addEventListener('change', function() {
 $("#fileInput").change(function () {
   readURL(this);
 $('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
-})
+});
 
 let clickButton = document.getElementById("submit");
 let fileInput = document.getElementById("fileInput");
