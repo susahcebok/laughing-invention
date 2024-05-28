@@ -2,7 +2,6 @@ function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function(e) {
-      $('#fileInput').css('display', 'none');
       $("#preview").attr("src", e.target.result);
     };
     reader.readAsDataURL(input.files[0]);
@@ -29,11 +28,11 @@ function drawImage() {
   document.getElementById('preview').src = hasil;
 
   console.log("Drew!");
-
+  
+  $('#fileInput').css('display', 'none');
   $('#submit').css('display', 'none');
   $('#unduh').css('display', 'inline-block');
   $('#unduh').attr('href', hasil);
-  $('#fileInput').css('display', 'none');
 }
 
 $("#fileInput").change(function () {
