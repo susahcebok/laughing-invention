@@ -13,7 +13,7 @@
   margin: 5em;
 }
 
-.quote, article {
+.container {
   width: 600px;
   margin: 1.5em auto;
   padding: 1.5em;
@@ -22,13 +22,13 @@
   border: 1px solid hsl(260, 60%, 92%);
 }
 
-.quote figcaption,
-.quote blockquote {
+.container footer,
+.quote p {
   margin: 1em;
 }
         
         @media (max-width: 700px) {
-        .quote, article {
+        .container {
             margin: 0 auto;
             width: auto;
         }
@@ -40,12 +40,13 @@
 <article>
   <p>Paragraph before quote.</p>
   
-  <figure class="quote">
+  <div class="quote">
     <p>
       Sophisticated foods <em>(wine, beer, coffee, chocolate)</em> are bittersweet. Addictive relationships are cooperative and competitive. Work becomes flow at the limits of ability. The flavor of life is on the <strong>edge</strong>.
     </b>
-    <figcaption>
-      &mdash; Naval Ravikant, <cite>Tweets on Adaptability</cite>  </figcaption>
+    <footer>
+      &mdash; Naval Ravikant, <cite>Tweets on Adaptability</cite>  
+    </footer>
   </p>
   </figure>
   
