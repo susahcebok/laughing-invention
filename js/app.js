@@ -29,7 +29,6 @@ function drawImage() {
 
   console.log("Drew!");
   
-  $('#fileInput').css('display', 'none');
   $('#submit').css('display', 'none');
   $('#unduh').css('display', 'inline-block');
   $('#unduh').attr('href', hasil);
