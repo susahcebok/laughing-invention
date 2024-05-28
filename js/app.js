@@ -32,6 +32,7 @@ function drawImage() {
   $('#submit').css('display', 'none');
   $('#unduh').css('display', 'inline-block');
   $('#unduh').attr('href', hasil);
+  $('#fileInput').css('display', 'none');
 }
 
 $("#fileInput").change(function () {
