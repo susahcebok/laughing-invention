@@ -50,6 +50,6 @@ clickButton.opacity = 0.3;
 } else {
 clickButton.disabled = false;
 clickButton.style.opacity = 1;
-output.innerHTML += "File dipilih";
+output.innerHTML += "File dipilih: ";
 }
 });
