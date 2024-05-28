@@ -47,8 +47,10 @@ fileInput.addEventListener("change", function () {
 if (fileInput.files.length == 0) {
 clickButton.disabled = true;
 clickButton.opacity = 0.3;
+output.innerHTML += "File is selected! <br/>";
 } else {
 clickButton.disabled = false;
 clickButton.style.opacity = 1;
+output.innerHTML += "Please, select a file! <br/>";
 }
 });
