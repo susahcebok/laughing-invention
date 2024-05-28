@@ -47,10 +47,9 @@ fileInput.addEventListener("change", function () {
 if (fileInput.files.length == 0) {
 clickButton.disabled = true;
 clickButton.opacity = 0.3;
-output.innerHTML += "File is selected! <br/>";
 } else {
 clickButton.disabled = false;
 clickButton.style.opacity = 1;
-output.innerHTML += "Bagikan Profile ini ke media sosial Anda: <span id="cvs" onclick="shareCanvas()"><strong>Share</strong></span>";
+output.innerHTML += "File dipilih";
 }
 });
