@@ -66,7 +66,7 @@ figure {
   margin: auto;
 }
 figcaption {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fdfdff;
   color: #fff;
   font: italic smaller sans-serif;
   padding: 3px;
