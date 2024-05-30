@@ -41,6 +41,8 @@ $('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
 
 let clickButton = document.getElementById("submit");
 let fileInput = document.getElementById("fileInput");
+let fileInput = document.getElementById("alert");
+
 fileInput.addEventListener("change", function () {
          
 // check if the file is selected or not
@@ -50,6 +52,6 @@ clickButton.opacity = 0.3;
 } else {
 clickButton.disabled = false;
 clickButton.style.opacity = 1;
-output.innerHTML += "<em>Share</em>";
+alert.innerHTML += "<em>Share</em>";
 }
 });
