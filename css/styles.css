@@ -21,6 +21,9 @@ img, canvas {
 width: 100%;
 height: auto;
 }
+img:hover {
+opacity: 0.3;
+}
 button {
 max-width: 100%;
 vertical-align: baseline;
