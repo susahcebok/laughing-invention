@@ -53,6 +53,7 @@ color:#fff;
 .gray {background-color: #e7e7e7; color: black;} /* Gray */
 .black {background-color: #555555;} /* Black */
 
+/* Input */
 .image-upload > input {
 display: none;
 }
@@ -60,17 +61,7 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
-.text {
-color: white;
-/*font-size: 20px;*/
-position: absolute;
-top: 50%;
-left: 50%;
--webkit-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-text-align: center;
-}
+
 /* cookies */
 .cookiePolicy {
   box-sizing: border-box;
