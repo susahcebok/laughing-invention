@@ -59,7 +59,7 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
-.box {
+.image-upload {
 position: relative;
 width: 100%;
 }
@@ -80,7 +80,7 @@ opacity: 0;
 transition: .5s ease;
 background-color: #008CBA;
 }
-.box:hover .overlay {
+.image-upload:hover .overlay {
 opacity: 1;
 }
 .text {
