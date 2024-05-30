@@ -81,7 +81,7 @@ const button = document.querySelector('em');
 canvas.toBlob((blob) => {
   const newImg = document.createElement("img");
   const url = URL.createObjectURL(blob);
-  const pngWrap = document.getElementById("twibbon");
+  const pngWrap = document.getElementById("cvs");
 
   newImg.onload = () => {
     // no longer need to read the blob so it's revoked
@@ -112,8 +112,6 @@ canvas.toBlob((blob) => {
     }
   })
 /** End share canvas png **/
-});
-/** End convert canvas to png **/
 
 </script>
 </body>
