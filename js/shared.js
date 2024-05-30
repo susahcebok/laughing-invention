@@ -55,7 +55,7 @@ navigator
 .share(shareData)
 .then(() => /* alert("Share was successful")) */ resultPara.textContent = "shared successfully");
 .catch((error) =>
-alert("Sharing failed")
+/* alert("Sharing failed") */ resultPara.textContent = `Error: Sharing failed`
 );
 } else {
 alert("Your system doesn't support sharing files");
