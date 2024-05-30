@@ -54,11 +54,19 @@ color:#fff;
 .black {background-color: #555555;} /* Black */
 .image-upload > input {
 display: none;
-position: relative;
 }
 .image-upload img {
 width: 100%;
 cursor: pointer;
+}
+.box {
+position: relative;
+width: 10%;
+}
+.res {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .overlay {
 position: absolute;
@@ -72,7 +80,7 @@ opacity: 0;
 transition: .5s ease;
 background-color: #008CBA;
 }
-.image-upload:hover .overlay {
+.box:hover .overlay {
 opacity: 1;
 }
 .text {
