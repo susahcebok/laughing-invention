@@ -29,8 +29,7 @@ border: 0;
 outline: 0;
 }
 button::-moz-focus-inner,
-input::-moz-focus-inner,
-.upload::-moz-focus-inner {
+input::-moz-focus-inner {
 border: 0;
 padding: 0;
 }
@@ -48,31 +47,8 @@ cursor: not-allowed;
 button:hover {
 opacity: 0.3; 
 }
-.upload {
-padding: 10px 25px;
-margin: 0 0 8px 0;
-display:inline-block;
-background: #f0f0f2;
-border-radius: 0.5em;
-}
-.upload:hover {
-opacity: 0.3; 
-}
-figure {
-border: thin #c0c0c0 solid;
-border-radius: 0.5em;
-display: flex;
-flex-flow: column;
-padding: 5px;
-margin: auto;
-}
-figcaption {
-background-color: #fdfdff;
-color: #222;
-font: italic smaller sans-serif;
-padding: 3px;
-text-align: center;
-}
+
+
 .image-upload > input {
 display: none;
 }
