@@ -1,5 +1,6 @@
 const img = document.querySelector("img");
 const canvas = document.querySelector("canvas");
+const resultPara = document.querySelector(".result")
 
 function resolveCanvasDimensions() {
 const { width, height } = window.getComputedStyle(img);
@@ -52,7 +53,7 @@ shareData.url = "https://susahcebok.github.io/laughing-invention/";
 
 navigator
 .share(shareData)
-.then(() => alert("Share was successful"))
+.then(() => /* alert("Share was successful")) */ resultPara.textContent = "shared successfully");
 .catch((error) =>
 alert("Sharing failed")
 );
