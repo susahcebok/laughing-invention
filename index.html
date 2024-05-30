@@ -74,34 +74,45 @@ stroke-width="2"/>
 <script type="text/javascript" src="js/cookies.js"></script>    
 
 <script>
-document.getElementById("share").addEventListener("click", () => {
-  console.log("share image");
+/** Start convert canvas to png **/
+const button = document.querySelector('em');
+canvas.toBlob((blob) => {
+  const newImg = document.createElement("img");
+  const url = URL.createObjectURL(blob);
+  const pngWrap = document.getElementById("png");
 
-  const dataUrl = canvas.toDataURL();
+  newImg.onload = () => {
+    // no longer need to read the blob so it's revoked
+    URL.revokeObjectURL(url);
+  };
+
+  newImg.src = url;
+  pngWrap.appendChild(newImg);
   
-  fetch(dataUrl)
-    .then(res => res.blob())
-    .then(blob => {
-      //console.log(blob)
-      const filesArray = [new File([blob], 'wahlkompass.png', { type: blob.type, lastModified: new Date().getTime() })];
-      console.log(filesArray);
-      const shareData = {
-        title: "Sieh dir mein Ergebnis vom STANDARD-Wahlkompass an",
-        files: filesArray
-      };
-      console.log(shareData);
-      if (navigator.share) {
-        navigator.share(
-          shareData
-        )
-        .then(() => console.log("thanks for share"))
-        .catch(error => console.log("error", error));
-      } else {
-        alert('navigator.share not available');
-      }
-
+  /** Start share canvas png **/
+  const filesArr = [
+    new File(
+    [blob],
+    'smile.png',
+    {
+      type: 'image/png',
+      lastModified: new Date().getTime()
     })
+  ];
+  button.removeAttribute('disabled');
+  button.addEventListener('click', function() {
+    if (navigator.canShare && navigator.canShare({
+        files: filesArr
+      })) {
+      navigator.share({
+        files: filesArr
+      })
+    }
+  })
+/** End share canvas png **/
 });
+/** End convert canvas to png **/
+
 </script>
 </body>
 </html>
