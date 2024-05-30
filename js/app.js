@@ -30,6 +30,7 @@ function drawImage() {
   console.log("Drew!");
   
   $('#submit').css('display', 'none');
+  $('#cancel').css('display', 'none');
   $('#unduh').css('display', 'inline-block');
   $('#unduh').attr('href', hasil);
 }
