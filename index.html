@@ -94,15 +94,15 @@ ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 async function dataUrlToBlob(url) {
 return fetch(url).then((res) => res.blob());
 }
-/*
+
 function toggleButtons(enabled) {
-document.querySelectorAll("button").forEach((button) => {
+document.querySelectorAll("img").forEach((button) => {
 enabled
 ? button.removeAttribute("disabled")
 : button.setAttribute("disabled", true);
 });
 }
-*/
+
 function share() {
 let start = Date.now();
 toggleButtons(false);
