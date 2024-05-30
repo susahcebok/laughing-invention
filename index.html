@@ -44,7 +44,7 @@
 
 <p>Bagikan Profile ini ke media sosial Anda: <span id="cvs" onclick="shareCanvas()"><strong>Share</strong></span></p>
 
-<em disabled>share</em>   
+<em>share</em>   
     
 <!-- COPY FROM THERE -->
 <div class="cookiePolicy">
@@ -81,7 +81,7 @@ const button = document.querySelector('em');
 canvas.toBlob((blob) => {
   const newImg = document.createElement("img");
   const url = URL.createObjectURL(blob);
-  const pngWrap = document.getElementById("cvs");
+  const pngWrap = document.getElementById("twibbon");
 
   newImg.onload = () => {
     // no longer need to read the blob so it's revoked
