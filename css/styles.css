@@ -61,7 +61,7 @@ cursor: pointer;
 }
 .box {
 position: relative;
-width: 10%;
+width: 100%;
 }
 .res {
   display: block;
