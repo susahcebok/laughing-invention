@@ -20,3 +20,21 @@ async function shareCanvas() {
   };
         navigator.share(shareData);
     }
+
+function initialize() {
+img.addEventListener(
+"load",
+() => {
+toggleButtons(true);
+},
+false
+);
+img.crossOrigin = "Anonymous";
+img.src =
+"https://susahcebok.github.io/laughing-invention/prev.png";
+}
+
+document.getElementById("share").addEventListener("click", share);
+
+toggleButtons();
+initialize();
