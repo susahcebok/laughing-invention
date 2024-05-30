@@ -33,13 +33,6 @@ input::-moz-focus-inner {
 border: 0;
 padding: 0;
 }
-.btn {
-padding: 10px 25px;
-margin: 0 0 8px 0;
-display:inline-block;
-background: #04AA6D;
-color:#fff;
-}
 button:disabled {
 opacity: 0.3;
 cursor: not-allowed;
@@ -47,6 +40,14 @@ cursor: not-allowed;
 button:hover {
 opacity: 0.3; 
 }
+.btn {
+padding: 10px 25px;
+margin: 0 0 8px 0;
+display:inline-block;
+background: #04AA6D;
+color:#fff;
+}
+
 
 
 .image-upload > input {
