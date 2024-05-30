@@ -50,6 +50,6 @@ clickButton.opacity = 0.3;
 } else {
 clickButton.disabled = false;
 clickButton.style.opacity = 1;
-output.innerHTML += "Bagikan Profile ini ke media sosial Anda: <em id="share">share</em>";
+output.innerHTML += "...";
 }
 });
