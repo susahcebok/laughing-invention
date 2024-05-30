@@ -73,6 +73,14 @@ font: italic smaller sans-serif;
 padding: 3px;
 text-align: center;
 }
+.image-upload > input {
+display: none;
+}
+
+.image-upload img {
+width: 100%;
+cursor: pointer;
+}
 /* cookies */
 .cookiePolicy {
   box-sizing: border-box;
