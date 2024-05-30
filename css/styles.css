@@ -47,13 +47,14 @@ display:inline-block;
 background: #04AA6D;
 color:#fff;
 }
-
-
-
+.green {background-color: #04AA6D;} /* Green */
+.blue {background-color: #008CBA;} /* Blue */
+.red {background-color: #f44336;} /* Red */
+.gray {background-color: #e7e7e7; color: black;} /* Gray */
+.black {background-color: #555555;} /* Black */
 .image-upload > input {
 display: none;
 }
-
 .image-upload img {
 width: 100%;
 cursor: pointer;
