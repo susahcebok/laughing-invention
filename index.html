@@ -42,7 +42,7 @@
 <span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
 </p>
 
-<p>Bagikan Profile ini ke media sosial Anda: <span id="cvs" onclick="shareCanvas()"><strong>Share</strong></span></p>
+<!--<p>Bagikan Profile ini ke media sosial Anda: <span id="cvs" onclick="shareCanvas()"><strong>Share</strong></span></p>-->
 
 <!-- COPY FROM THERE -->
 <div class="cookiePolicy">
@@ -94,7 +94,7 @@ return fetch(url).then((res) => res.blob());
 }
 
 function toggleButtons(enabled) {
-document.querySelectorAll("button").forEach((button) => {
+document.querySelectorAll("em").forEach((button) => {
 enabled
 ? button.removeAttribute("disabled")
 : button.setAttribute("disabled", true);
@@ -110,7 +110,7 @@ let url = canvas.toDataURL("image/png");
 let dataurl = Date.now();
 dataUrlToBlob(url).then((blob) => {
 let blobtime = Date.now();
-var file = new File([blob], "PrettyPicture.png", {
+var file = new File([blob], "prev.png", {
 type: "image/png"
 });
 var filesArray = [file];
