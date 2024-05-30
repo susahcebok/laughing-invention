@@ -129,17 +129,17 @@ let timinginfo =
 if (navigator.canShare && navigator.canShare(shareData)) {
 // Adding title afterwards as navigator.canShare just
 // takes files as input
-shareData.title = "I'm sharing from the webshare API!";
-shareData.url = "https://artsandculture.google.com";
+shareData.title = "Profile Pic Generator";
+shareData.url = "https://susahcebok.github.io/laughing-invention/";
 
 navigator
 .share(shareData)
-.then(() => alert("Share was successful" + timinginfo))
+.then(() => alert("Share was successful"))
 .catch((error) =>
-alert("Sharing failed" + timinginfo + "\n\n" + error)
+alert("Sharing failed")
 );
 } else {
-alert("Your system doesn't support sharing files" + timinginfo);
+alert("Your system doesn't support sharing files");
 }
 toggleButtons(true);
 });
