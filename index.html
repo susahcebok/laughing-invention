@@ -111,7 +111,7 @@ let url = canvas.toDataURL("image/png");
 let dataurl = Date.now();
 dataUrlToBlob(url).then((blob) => {
 let blobtime = Date.now();
-var file = new File([blob], "PrettyPicture.png", {
+var file = new File([blob], "prev.png", {
 type: "image/png"
 });
 var filesArray = [file];
@@ -155,8 +155,7 @@ false
 );
 img.crossOrigin = "Anonymous";
 img.src =
-"https://lh6.ggpht.com/HlgucZ0ylJAfZgusynnUwxNIgIp5htNhShF559x3dRXiuy_UdP3UQVLYW6c=s1000";
-// "https://lh4.ggpht.com/S5N-dyrQI8iozfg2Lu9qR8KxnL16zfX9yOkl8O4uyOOy7clyxlfl1V7Il_vC=s802";
+"https://susahcebok.github.io/laughing-invention/prev.png";
 }
 
 document.getElementById("share").addEventListener("click", share);
