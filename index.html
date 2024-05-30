@@ -116,7 +116,7 @@ type: "image/png"
 });
 var filesArray = [file];
 var shareData = { files: filesArray };
-
+/*
 let timinginfo =
 " (canvas copy took " +
 (canvascopy - start) +
@@ -125,7 +125,7 @@ let timinginfo =
 "ms. blob conversion " +
 (blobtime - dataurl) +
 "ms)";
-
+*/
 if (navigator.canShare && navigator.canShare(shareData)) {
 // Adding title afterwards as navigator.canShare just
 // takes files as input
