@@ -53,9 +53,9 @@ shareData.url = "https://susahcebok.github.io/laughing-invention/";
 
 navigator
 .share(shareData)
-.then(() => /* alert("Share was successful"))  */ out.innerHTML += "Share was successful")
+.then(() =>  alert("Share was successful"))  
 .catch((error) =>
-/* alert("Sharing failed") */ out.innerHTML += "Sharing failed")
+alert("Sharing failed") 
 );
 } else {
 alert("Your system doesn't support sharing files");
