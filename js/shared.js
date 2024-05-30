@@ -1,6 +1,6 @@
 const img = document.querySelector("img");
 const canvas = document.querySelector("canvas");
-const canvas = document.querySelector("out");
+const canvas = document.querySelector(".out");
 
 function resolveCanvasDimensions() {
 const { width, height } = window.getComputedStyle(img);
