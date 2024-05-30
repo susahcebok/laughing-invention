@@ -117,20 +117,12 @@ type: "image/png"
 });
 var filesArray = [file];
 var shareData = { files: filesArray };
-/*
-let timinginfo =
-" (canvas copy took " +
-(canvascopy - start) +
-"ms. canvas to dataurl " +
-(dataurl - canvascopy) +
-"ms. blob conversion " +
-(blobtime - dataurl) +
-"ms)";
-*/
+
 if (navigator.canShare && navigator.canShare(shareData)) {
 // Adding title afterwards as navigator.canShare just
 // takes files as input
 shareData.title = "Profile Pic Generator";
+shareData.text = "Profile Pic Generator";
 shareData.url = "https://susahcebok.github.io/laughing-invention/";
 
 navigator
