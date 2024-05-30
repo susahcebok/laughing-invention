@@ -52,28 +52,13 @@ color:#fff;
 .red {background-color: #f44336;} /* Red */
 .gray {background-color: #e7e7e7; color: black;} /* Gray */
 .black {background-color: #555555;} /* Black */
+
 .image-upload > input {
 display: none;
 }
 .image-upload img {
 width: 100%;
 cursor: pointer;
-position: relative;
-}
-.overlay {
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-height: 100%;
-width: 100%;
-opacity: 0;
-transition: .5s ease;
-background-color: #008CBA;
-}
-.image-upload:hover .overlay {
-opacity: 1;
 }
 .text {
 color: white;
