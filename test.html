@@ -6,12 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <script src="jquery-3.4.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
-
     <style type="text/css">
     body {
         background-color: #f0f0f2;
@@ -147,6 +142,8 @@
         }
     }
     </style>        
+
+    <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
 </head>
 
 <body>
@@ -169,42 +166,7 @@
     <div id="divDebug"></div>
     -->
 </main>
+    
     <script type="text/javascript" src="app.js"></script>
-
-    <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
-    -->
-
-    <script>
-    $(".btnAlert").click(function() {
-    $.dialog({
-      title: 'Alert!',
-      content: '<img src="prev.png">',
-      closeIcon: true,
-      closeIconClass: 'fa fa-close',
-    });
-});
-
-$(".btnConfirm").click(function() {
-    var dialogResult = "";
-    $.confirm({
-        title: 'Confirm!',
-        content: '<img src="prev.png">',
-        closeIcon: true,
-        closeIconClass: 'fa fa-close',
-        buttons: {
-            Yes: function () {
-                dialogResult = "Yes";
-                $("#divDebug").text("Dialog Result = " + dialogResult);
-            },
-            No: function () {
-                dialogResult = "No";
-                $("#divDebug").text("Dialog Result = " + dialogResult);
-            },
-        }
-    });
-});
-    </script>
 </body>
 </html>
