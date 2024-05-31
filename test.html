@@ -77,8 +77,8 @@
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-    <button class="ripple btnAlert">Show Alert</button>
-    <button class="ripple btnConfirm">Show Confirm</button>
+    <button class="btnAlert">Show Alert</button>
+    <button class="btnConfirm">Show Confirm</button>
     
     <div id="divDebug"></div>
 </main>
@@ -92,8 +92,8 @@
     $(".btnAlert").click(function() {
     $.dialog({
       title: 'Alert!',
-      content: '<img src="prev.png"> <button class="ripple btnAlert">Show Alert</button>
-      <button class="ripple btnConfirm">Show Confirm</button>',
+      content: '<img src="prev.png"> <button>Show Alert</button>
+      <button>Show Confirm</button>',
       closeIcon: true,
       closeIconClass: 'fa fa-close',
     });
