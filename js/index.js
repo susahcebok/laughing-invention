@@ -37,3 +37,12 @@ $("#fileInput").change(function() {
 $('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
 });
 
+$('.submit').bind("click",function() { 
+  var imgVal = $('#fileInput').val(); 
+  if(imgVal=='') 
+  { 
+    output.innerHTML = "Tidak ada file gambar yang dipilih, lanjut unduh? ";
+  } else {
+    output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
+  }
+}); 
