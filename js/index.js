@@ -35,8 +35,3 @@ function drawImage() {
 $("#fileInput").change(function() {
   readURL(this);
 });
-
-/*
-$('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
-});
-/*
