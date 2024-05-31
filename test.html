@@ -183,6 +183,20 @@
 </main>
     
     <script type="text/javascript" src="app.js"></script>
-    
+    <script>
+        let up = document.getElementById('up');
+        let down = document.getElementById('down);
+ 
+        up.innerHTML = "Click on the button to see"
+            + " if any file is selected";
+ 
+        function drawImage() {
+            if ($('#fileInput')[0].files.length === 0) {
+                down.innerHTML = "No files selected";
+            } else {
+                down.innerHTML = "Some file is selected";
+            }
+        }
+    </script>
 </body>
 </html>
