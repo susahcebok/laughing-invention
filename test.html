@@ -106,6 +106,17 @@
         background-color: #f39c12;
         color: #FFF;
     }
+    .default {
+        background-color: #ecf0f1;
+        color: #000;
+        text-shadow: none;
+        -webkit-transition: background .2s;
+        transition: background .2s;
+    }
+    .default:hover {
+        background-color: #bdc3c7;
+        color: #000;
+    }
 
     @media (max-width: 700px) {
     main {
@@ -121,7 +132,7 @@
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-    <button class="btnAlert red">Show Alert</button>
+    <button class="btnAlert default">Show Alert</button>
     <button class="btnConfirm orange">Show Confirm</button>
     
     <div id="divDebug"></div>
