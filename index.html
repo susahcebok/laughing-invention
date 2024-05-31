@@ -66,6 +66,27 @@
     <!-- cookies -->  
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
     <script type="text/javascript" src="js/cookies.js"></script>
-    
+
+    <script>
+    const shareData = {
+  title: "PFP GENERATOR",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
+
+const btn = document.querySelector("em");
+const resultPara = document.querySelector(".result");
+
+// Share must be triggered by "user activation"
+btn.addEventListener("click", async () => {
+  try {
+    await navigator.share(shareData);
+    resultPara.textContent = "MDN shared successfully";
+  } catch (err) {
+    resultPara.textContent = `Error: ${err}`;
+  }
+});
+
+    </script>
 </body>
 </html>
