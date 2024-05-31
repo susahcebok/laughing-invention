@@ -92,7 +92,8 @@
     $(".btnAlert").click(function() {
     $.dialog({
       title: 'Alert!',
-      content: '<img src="prev.png">',
+      content: '<img src="prev.png"> <button class="ripple btnAlert">Show Alert</button>
+      <button class="ripple btnConfirm">Show Confirm</button>',
       closeIcon: true,
       closeIconClass: 'fa fa-close',
     });
