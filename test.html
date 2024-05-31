@@ -182,5 +182,16 @@
 </main>
     
     <script type="text/javascript" src="app.js"></script>
+    <script>
+      let output = document.getElementById("output");
+      function validateFileInput() {
+         let files = $("#fileInput")[0].files.length;
+         if (files != 0) {
+            output.innerHTML += "File is selected! <br/>";
+         } else {
+            output.innerHTML += "Please, select a file!<br>";
+         }
+      }
+   </script>
 </body>
 </html>
