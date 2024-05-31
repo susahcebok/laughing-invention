@@ -198,6 +198,24 @@
                 down.innerHTML = "Some file is selected";
             }
         }
+
+         $('.submit').bind("click",function() 
+    { 
+ 
+   
+        var imgVal = $('#fileInput').val(); 
+        if(imgVal=='') 
+        { 
+            down.innerHTML = "No files selected";
+
+        } 
+       else
+         {
+           down.innerHTML = "Some file is selected";
+         }
+   
+
+    }); 
     </script>
 </body>
 </html>
