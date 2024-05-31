@@ -100,14 +100,13 @@
     $.dialog({
       title: 'Alert!',
       content: '<img src="prev.png">',
-      closeIcon: true,
-      closeIconClass: 'fa fa-close',
+      columnClass: 'small',
     });
 });
 
 $(".btnConfirm").click(function() {
     var dialogResult = "";
-    $.dialog({
+    $.confirm({
         title: 'Confirm!',
         content: '<img src="prev.png">',
         buttons: {
