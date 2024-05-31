@@ -17,8 +17,8 @@ function drawImage() {
   var canvas = document.getElementById('cvs');
   var context = canvas.getContext('2d');
 
-  canvas.width = 1080;
-  canvas.height = 1080;
+  canvas.width = 1024;
+  canvas.height = 1024;
   context.drawImage(picture, 0, 0, canvas.width, canvas.height);
   context.drawImage(twibbon, 0, 0, canvas.width, canvas.height);
 
