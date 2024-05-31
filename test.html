@@ -50,5 +50,30 @@
     
     <div id="divDebug"></div>
 </main>
+    <script>
+    $("#btnAlert").click(function() {
+    $.alert({
+      title: 'Alert!',
+      content: 'Simple alert!',
+    });
+});
+
+$("#btnConfirm").click(function() {
+    var dialogResult = "";
+    $.confirm({
+        title: 'Confirm!',
+        content: 'Simple confirm!',
+        buttons: {
+            Yes: function () {
+                dialogResult = "Yes";
+                $("#divDebug").text("Dialog Result = " + dialogResult);
+            },
+            No: function () {
+                dialogResult = "No";
+                $("#divDebug").text("Dialog Result = " + dialogResult);
+            },
+        }
+    });
+    </script>
 </body>
 </html>
