@@ -48,6 +48,9 @@
 <span id="result"></span> <a href="#" id="unduh" download="download.png" style="display: none">Klik disini.</a>
 </p>
   
+<button id="btnAlert">Show Alert</button>
+<button id="btnConfirm">Show Confirm</button>
+
 <div id="divDebug"></div>
   
 <!--<p>Bagikan Profile ini ke media sosial Anda: <span id="cvs" onclick="shareCanvas()"><strong>Share</strong></span></p>-->
@@ -90,7 +93,7 @@ $("#btnAlert").click(function() {
     });
 });
 
-$("#submit").click(function() {
+$("#btnConfirm").click(function() {
     var dialogResult = "";
     $.confirm({
         title: 'Confirm!',
