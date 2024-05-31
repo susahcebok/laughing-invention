@@ -102,6 +102,8 @@
       content: '<img src="prev.png">',
       boxWidth: '300px',
       useBootstrap: false,
+      closeIcon: true,
+      closeIconClass: 'fa fa-close'
     });
 });
 
@@ -111,7 +113,9 @@ $(".btnConfirm").click(function() {
         title: 'Confirm!',
         content: '<img src="prev.png">',
         boxWidth: '300px',
-      useBootstrap: false,
+        useBootstrap: false,
+        closeIcon: true,
+        closeIconClass: 'fa fa-close'
         buttons: {
             Yes: function () {
                 dialogResult = "Yes";
