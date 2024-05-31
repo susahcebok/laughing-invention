@@ -110,6 +110,8 @@ $(".btnConfirm").click(function() {
     $.confirm({
         title: 'Confirm!',
         content: '<img src="prev.png">',
+        boxWidth: '300px',
+      useBootstrap: false,
         buttons: {
             Yes: function () {
                 dialogResult = "Yes";
