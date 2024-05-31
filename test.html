@@ -169,7 +169,7 @@
     <p id = "output"> </p>
 
     <p>
-    <button id="click" class="submit blue" onclick = "drawImage()">Buat</button>
+    <button class="submit blue" onclick = "drawImage()">Buat</button>
     <a href="#" class="unduh button-green" download="download.png" style="display: none">Download</a>
     <button class="cancel red" onclick="location.reload()">Cancel</button>
     </p>
@@ -183,15 +183,6 @@
 </main>
     
     <script type="text/javascript" src="app.js"></script>
-    <script>
-      let output = document.getElementById("output");
-      let clickButton = document.getElementById("click");
-      function drawImage() {
-         let files = $("#fileInput")[0].files.length;
-          if (!$('#submit').val()) {
-            output.innerHTML += "Please, select a file!<br>";
-         } 
-      }
-   </script>
+    
 </body>
 </html>
