@@ -130,6 +130,7 @@ display: none;
 }
 .image-upload img {
 width: 100%;
+border-radius: 50%;
 cursor: pointer;
 }
 /* cookies */
