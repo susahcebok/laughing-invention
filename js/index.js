@@ -43,6 +43,6 @@ $('.submit').bind("click",function() {
   { 
     output.innerHTML = "Tidak ada file gambar yang dipilih, lanjut unduh? ";
   } else {
-    output.innerHTML = "Anda berhasil mengunduh! Terima kasih. <em>share</em> Jika unduhan tidak dimulai, ";
+    output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
   }
 }); 
