@@ -45,8 +45,8 @@
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-    <button id="btnAlert">Show Alert</button>
-    <button id="btnConfirm">Show Confirm</button>
+    <button id="Alert">Show Alert</button>
+    <button id="Confirm">Show Confirm</button>
     
     <div id="divDebug"></div>
 </main>
@@ -57,14 +57,14 @@
     -->
 
     <script>
-    $("#btnAlert").click(function() {
+    $("#Alert").click(function() {
     $.alert({
       title: 'Alert!',
       content: 'Simple alert!',
     });
 });
 
-$("#btnConfirm").click(function() {
+$("#Confirm").click(function() {
     var dialogResult = "";
     $.confirm({
         title: 'Confirm!',
