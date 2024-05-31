@@ -25,7 +25,15 @@ function drawImage() {
   var hasil = canvas.toDataURL("image/png");
   document.getElementById('preview').src = hasil;
 
-  console.log("Drew!");
+//  console.log("Drew!");
+  //If your file Is Empty:
+if ($('#fileInput').val() == '') {
+    $('#output').html("Please Attach File");
+} else {
+    console.log('ok');
+}
+
+
 
   $('.submit').css('display', 'none');
   $('.unduh').css('display', 'inline-block');
