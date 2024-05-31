@@ -95,6 +95,17 @@
         background-color: #c0392b;
         color: #FFF;
     }
+    .orange {
+        background-color: #f1c40f;
+        color: #FFF;
+        text-shadow: none;
+        -webkit-transition: background .2s;
+        transition: background .2s;
+    }
+    .orange:hover {
+        background-color: #f39c12;
+        color: #FFF;
+    }
 
     @media (max-width: 700px) {
     main {
@@ -111,7 +122,7 @@
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
     <button class="btnAlert red">Show Alert</button>
-    <button class="btnConfirm green">Show Confirm</button>
+    <button class="btnConfirm orange">Show Confirm</button>
     
     <div id="divDebug"></div>
 </main>
