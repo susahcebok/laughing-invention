@@ -20,6 +20,7 @@ text-decoration: none;
 img {
 width: 100%;
 height: auto;
+border-radius: 50%;
 }
 button {
 display: inline-block;
@@ -130,7 +131,6 @@ display: none;
 }
 .image-upload img {
 width: 100%;
-border-radius: 50%;
 cursor: pointer;
 }
 /* cookies */
