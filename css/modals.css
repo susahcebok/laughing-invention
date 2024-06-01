@@ -208,4 +208,10 @@ ul {
   margin: 0;
   padding: 0; 
 }
-
+.image-upload > input {
+display: none;
+}
+.image-upload img {
+width: 100%;
+cursor: pointer;
+}
