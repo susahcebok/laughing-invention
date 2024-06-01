@@ -52,7 +52,7 @@ shareData.url = "https://susahcebok.github.io/laughing-invention/";
 
 navigator
 .share(shareData)
-.then(() =>  alert("Share was successful"))  
+.then(() =>  /* alert("Share was successful")) */ alert.innerHTML = "Share was successful";
 .catch((error) =>
 alert("Sharing failed") 
 );
