@@ -49,7 +49,7 @@ top: -9999px;
 right: 0;
 margin: auto;
 padding: 0;
-width: 400px; 
+max-width: 100%; 
 min-height:100px; 
 background: #FFF;
 border: 1px solid #E9E9E9;
@@ -82,13 +82,13 @@ width: auto;
 /* = @media queries   */
 ===========================
 @media (min-width: 980px){
-.myModal_inner {width:480px;}}
+.myModal_inner {width:400px;}}
 @media (min-width: 768px) and (max-width: 979px) {
-.myModal_inner {width:480px;}}
+.myModal_inner {width:400px;}}
 @media (max-width: 767px) { 
-.myModal_inner {width:480px;}}
+.myModal_inner {width:400px;}}
 @media (max-width: 480px) { 
-.myModal_inner {width:480px;}
+.myModal_inner {width:400px;}
 
 
 /* layout */
