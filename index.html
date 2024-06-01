@@ -1,107 +1,107 @@
 <!doctype html>
 <html>
 <head>
-    <title>PFP GENERATOR</title>
+<title>PFP GENERATOR</title>
 
-    <meta charset="utf-8" />
-    <meta name="description" content="Upload foto terbaik Anda yang ingin di jadikan profile lalu klik Unduh">
-    <meta name="keywords" content="Twibbon, PFP Generator, Avatar, Profile Pic Generator, Framer">
-    <meta name="author" content="Ferry Ayunda">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="description" content="Upload foto terbaik Anda yang ingin di jadikan profile lalu klik Unduh">
+<meta name="keywords" content="Twibbon, PFP Generator, Avatar, Profile Pic Generator, Framer">
+<meta name="author" content="Ferry Ayunda">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <!-- <link rel="stylesheet" href="css/index.css"> -->  
-    <link rel="stylesheet" href="css/modals.css">       
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<!-- <link rel="stylesheet" href="css/index.css"> -->  
+<link rel="stylesheet" href="css/modals.css">       
 
 
-    <script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
 </head>
 
 <body>
 <div class="wrapper">
 
-  <div class="wrapper-inner">
-    <h2>PFP GENERATOR</h2>
-    <p>Upload gambar terbaik Anda dan letakkan file gambar dibawah atau klik untuk mengunggah.</p>
-    <p>
-    <div class="image-upload">
-    <label for="fileInput">
-    <img id="preview" src="prev.png" alt="Preview Twibbon"/>
-    <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
-    <canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
-    </label>
-    <input id="fileInput" type="file" accept="image/*">
-    </div>
-    </p>
+<div class="wrapper-inner">
+<h2>PFP GENERATOR</h2>
+<p>Upload gambar terbaik Anda dan letakkan file gambar dibawah atau klik untuk mengunggah.</p>
+<p>
+<div class="image-upload">
+<label for="fileInput">
+<img id="preview" src="prev.png" alt="Preview Twibbon"/>
+<img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
+<canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+</label>
+<input id="fileInput" type="file" accept="image/*">
+</div>
+</p>
 
-    <p>
-    <span id="output"></span> <a href="#" class="unduh" download="download.png" style="display: none">Klik disini.</a>
-    </p>
+<p>
+<span id="output"></span> <a href="#" class="unduh" download="download.png" style="display: none">Klik disini.</a>
+</p>
     
-    <p>
-    <button class="submit blue" onclick = "drawImage()">Unduh</button>
-    <button class="cancel red" onclick="location.reload()">Cancel</button>
-    </p>
+<p>
+<button class="submit blue" onclick = "drawImage()">Unduh</button>
+<button class="cancel red" onclick="location.reload()">Cancel</button>
+</p>
 
-    <p class="result">Bagikan Twibbon ini ke media sosial Anda: <em>Share.</em></p>
+<p class="result">Bagikan Twibbon ini ke media sosial Anda: <em>Share.</em></p>
 
-    <h2>Very Simply Modal</h2>
-     <ul>
-      <li>Demo <a href="#" class="success">Success </a></li>
-      <li>Demo <a href="#" class="error">Error</a></li>
-      <li>Demo <a href="#" class="custom">Custom Success</a></li>
-      <li>Demo <a href="#" class="image">Image Success</a></li>
-      <li>Demo <a href="#" class="login">Login Success</a></li>
-      <li>Demo <a href="#" class="various">Divers Success and Error</a></li>
-    </ul>  
+<h2>Very Simply Modal</h2>
+<ul>
+<li>Demo <a href="#" class="success">Success </a></li>
+<li>Demo <a href="#" class="error">Error</a></li>
+<li>Demo <a href="#" class="custom">Custom Success</a></li>
+<li>Demo <a href="#" class="image">Image Success</a></li>
+<li>Demo <a href="#" class="login">Login Success</a></li>
+<li>Demo <a href="#" class="various">Divers Success and Error</a></li>
+</ul>  
   
-  </div>
+</div>
 
 
 
 <!-- overlay -->
 <div class="myModal">
-  <!-- modal -->
-  <div class="myModal_inner">
-    <!-- close btn -->
-    <a href="#" class="myModal_close">X</a>
-    <div class="myModal_content">
-      <!-- contents goes here -->
-    </div>
-  </div>
+<!-- modal -->
+<div class="myModal_inner">
+<!-- close btn -->
+<a href="#" class="myModal_close">X</a>
+<div class="myModal_content">
+<!-- contents goes here -->
+</div>
+</div>
 </div>
     
 </div>
     
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/modals.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/modals.js"></script>
     
-    <!-- cookies -->  
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
-    <script type="text/javascript" src="js/cookies.js"></script>
+<!-- cookies -->  
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+<script type="text/javascript" src="js/cookies.js"></script>
 
-    <script>
-    const shareData = {
-        title: "PFP GENERATOR",
-        text: "PFP GENERATOR",
-        url: "https://susahcebok.github.io/laughing-invention/",
-    };
+<script>
+const shareData = {
+title: "PFP GENERATOR",
+text: "PFP GENERATOR",
+url: "https://susahcebok.github.io/laughing-invention/",
+};
         
-        const btn = document.querySelector("em");
-        const resultPara = document.querySelector(".result");
+const btn = document.querySelector("em");
+const resultPara = document.querySelector(".result");
         
-        // Share must be triggered by "user activation"
-        btn.addEventListener("click", async () => {
-            try {
-                await navigator.share(shareData);
-                resultPara.textContent = "Berhasil dibagikan.";
-            } catch (err) {
-                resultPara.textContent = `Error: Bagikan dibatalkan.`;
-            }
-        });
+// Share must be triggered by "user activation"
+btn.addEventListener("click", async () => {
+try {
+await navigator.share(shareData);
+resultPara.textContent = "Berhasil dibagikan.";
+} catch (err) {
+resultPara.textContent = `Error: Bagikan dibatalkan.`;
+}
+});
 
-    </script>
+</script>
 
 </body>
 </html>
