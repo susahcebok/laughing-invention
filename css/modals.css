@@ -82,13 +82,13 @@ width: auto;
 /* = @media queries   */
 ===========================
 @media (min-width: 980px){
-.myModal_inner {width:400px;}}
+.myModal_inner {width:350px;}}
 @media (min-width: 768px) and (max-width: 979px) {
-.myModal_inner {width:400px;}}
+.myModal_inner {width:350px;}}
 @media (max-width: 767px) { 
-.myModal_inner {width:400px;}}
+.myModal_inner {width:350px;}}
 @media (max-width: 480px) { 
-.myModal_inner {width:400px;}
+.myModal_inner {width:350px;}
 
 
 /* layout */
