@@ -171,6 +171,30 @@ body:before {
 .wrapper:before {
   content: "";
   display: table;
-}input[type="text"],input[type="password"]{line-height: normal;border: 1px solid #2C3E50;display: block;width: 98%;padding: 5px 2px;background: #34495E;color: #ECF0F1}input[type="submit"]{line-height: normal;border: 1px solid #2C3E50;display: inline-block;padding: 5px 10px;background: #4D4D4D;color: #ECF0F1}input[type="submit"]:hover{border: 1px solid #C0392B;background: #E74C3C;color: #ECF0F1;outline:none}ul{list-style:none;margin:0;padding:0;}
+}
+input[type="text"],
+input[type="password"] {
+  line-height: normal;
+  border: 1px solid #2C3E50;
+  display: block;
+  width: 98%;
+  padding: 5px 2px;
+  background: #34495E;
+  color: #ECF0F1;
+}
+input[type="submit"] {
+  line-height: normal;
+  border: 1px solid #2C3E50;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #4D4D4D;
+  color: #ECF0F1;
+}
+input[type="submit"]:hover {
+  border: 1px solid #C0392B;
+  background: #E74C3C;
+  color: #ECF0F1;
+  outline:none;
+}ul{list-style:none;margin:0;padding:0;}
 
 
