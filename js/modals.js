@@ -108,7 +108,17 @@ $('.custom').on('click',function(){
 
 // demo success
 $('.image').on('click',function(){
-  myModal.success('<h3>This is a image</h3><img src="https://susahcebok.github.io/laughing-invention/prev.png"/>'); 
+  myModal.success('<h3>This is a image</h3>
+                  <p>
+<div class="image-upload">
+<label for="fileInput">
+<img id="preview" src="prev.png" alt="Preview Twibbon"/>
+<img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
+<canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+</label>
+<input id="fileInput" type="file" accept="image/*">
+</div>
+</p>'); 
 });
 
 // demo login
