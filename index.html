@@ -71,23 +71,23 @@
 
     <script>
     const shareData = {
-  title: "PFP GENERATOR",
-  text: "PFP GENERATOR",
-  url: "https://susahcebok.github.io/laughing-invention/",
-};
-
-const btn = document.querySelector("em");
-const resultPara = document.querySelector(".result");
-
-// Share must be triggered by "user activation"
-btn.addEventListener("click", async () => {
-  try {
-    await navigator.share(shareData);
-    resultPara.textContent = "Berhasil dibagikan.";
-  } catch (err) {
-    resultPara.textContent = `Error: Bagikan dibatalkan.`;
-  }
-});
+        title: "PFP GENERATOR",
+        text: "PFP GENERATOR",
+        url: "https://susahcebok.github.io/laughing-invention/",
+    };
+        
+        const btn = document.querySelector("em");
+        const resultPara = document.querySelector(".result");
+        
+        // Share must be triggered by "user activation"
+        btn.addEventListener("click", async () => {
+            try {
+                await navigator.share(shareData);
+                resultPara.textContent = "Berhasil dibagikan.";
+            } catch (err) {
+                resultPara.textContent = `Error: Bagikan dibatalkan.`;
+            }
+        });
 
     </script>
 </body>
