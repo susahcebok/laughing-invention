@@ -39,8 +39,8 @@
 }
 .myModal_content {
   display: block;
-  margin-top: 20px; 
-  padding: 15px; 
+  margin-top: 15px; 
+  padding: 20px; 
   max-width: 100%;
 }
 .myModal_inner {
