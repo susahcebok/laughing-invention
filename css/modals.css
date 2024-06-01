@@ -79,7 +79,7 @@ margin: 0 auto;
 width: auto;
 }
 }
-/* = @media queries   
+/* = @media queries   */
 ===========================
 @media (min-width: 980px){
   .myModal_inner {width:350px;}}
@@ -89,9 +89,9 @@ width: auto;
   .myModal_inner {width:300px;}}
 @media (max-width: 480px) { 
   .myModal_inner {width:235px;}
-*/
 
-  /* Demo
+
+  /* Demo */
 
 *,*:after,
 *:before {
@@ -209,4 +209,3 @@ ul {
   padding: 0; 
 }
 
-*/
