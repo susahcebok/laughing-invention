@@ -39,7 +39,7 @@ transition: all 0.5s ease;
 }
 .myModal_content {
 display: block;
-margin-top: 15px; 
+margin-top: 5px; 
 padding: 20px; 
 }
 .myModal_inner {
