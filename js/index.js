@@ -32,9 +32,9 @@ function drawImage() {
   $('.unduh').attr('href', hasil);
 }
 
-$(".fileInput").change(function() {
+$("#fileInput").change(function() {
   readURL(this);
-$('.value').text(this.value.replace(/C:\\fakepath\\/i, ''));
+$('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
 });
 
 $('.submit').bind("click",function() { 
