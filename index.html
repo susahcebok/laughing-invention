@@ -83,7 +83,7 @@ const resultPara = document.querySelector(".result");
 btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = "shared successfully";
+    resultPara.textContent = "Berhasil dibagikan.";
   } catch (err) {
     resultPara.textContent = `Error: Bagikan dibatalkan.`;
   }
