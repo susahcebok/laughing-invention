@@ -45,7 +45,7 @@ padding: 20px;
 .myModal_inner {
 position: absolute;
 left: 0;
-top: -9999px;
+/* top: -9999px; */
 right: 0;
 margin: auto;
 padding: 0;
@@ -82,13 +82,13 @@ width: auto;
 /* = @media queries   */
 ===========================
 @media (min-width: 980px){
-.myModal_inner {width:350px;}}
+.myModal_inner {width:300px;}}
 @media (min-width: 768px) and (max-width: 979px) {
-.myModal_inner {width:350px;}}
+.myModal_inner {width:300px;}}
 @media (max-width: 767px) { 
-.myModal_inner {width:350px;}}
+.myModal_inner {width:300px;}}
 @media (max-width: 480px) { 
-.myModal_inner {width:350px;}
+.myModal_inner {width:300px;}
 
 
 /* layout */
