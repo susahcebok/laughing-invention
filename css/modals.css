@@ -74,7 +74,7 @@
   color: #ECF0F1;
 }
 /* = @media queries   
-===========================*/
+===========================
 @media (min-width: 980px){
   .myModal_inner {width:350px;}}
 @media (min-width: 768px) and (max-width: 979px) {
@@ -83,7 +83,8 @@
   .myModal_inner {width:300px;}}
 @media (max-width: 480px) { 
   .myModal_inner {width:235px;}
-  
+ */
+
   /* Demo
 
 *,*:after,
