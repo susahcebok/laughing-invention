@@ -41,7 +41,6 @@
   display: block;
   margin-top: 15px; 
   padding: 20px; 
-  max-width: 100%;
 }
 .myModal_inner {
   position: absolute;
@@ -50,7 +49,7 @@
   right: 0;
   margin: auto;
   padding: 0;
-  width: 500px; 
+  width: 400px; 
   min-height:100px; 
   background: #FFF;
   border: 1px solid #E9E9E9;
