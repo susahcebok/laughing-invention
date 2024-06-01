@@ -121,7 +121,7 @@ a:focus {
 p {
   margin: 0 0 1em;
 }
-img,object,video {
+img,object,video,canvas {
   max-width: 100%;
   border: 0;
 }
@@ -170,9 +170,11 @@ body:before {
   z-index: -99999999;
 }
 .wrapper {
-  max-width: 70em;
-  margin: 0 auto;
-  padding: 0 1em;
+  width: 600px;
+  margin: 5em auto;
+  padding: 2em;
+/*  margin: 0 auto; */
+/*  padding: 0 1em; */
   overflow: hidden;
 }
 .wrapper:before {
