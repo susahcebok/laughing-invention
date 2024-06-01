@@ -121,6 +121,26 @@ img,object,video {
 a img {
   border: 0;
   outline: 0;
-}h1{font-size: 3em;line-height: 1;letter-spacing: -0.02em;margin-bottom: 0.2em}h2{font-size: 2em;line-height: 1.1;margin-bottom: 0.2em}h3{font-weight: normal;line-height: 1.1;padding-bottom: 0.4em}h1 a,h2 a,h3 a{display: block}blockquote{border-left: 0.5em solid #c0392b;padding-left: 1em;margin-left: 1em}body{-webkit-background-size: cover;background-size: cover;min-height: 100%;line-height: 1.5em;font-size: 14px;font-family: 'Montserrat', 'sans-serif';font-weight: normal}body:before{content: "";width: 100%;height: 100%;position: absolute;z-index: -99999999}.wrapper{max-width: 70em;margin: 0 auto;padding: 0 1em;overflow: hidden}.wrapper:before{content: "";display: table}input[type="text"],input[type="password"]{line-height: normal;border: 1px solid #2C3E50;display: block;width: 98%;padding: 5px 2px;background: #34495E;color: #ECF0F1}input[type="submit"]{line-height: normal;border: 1px solid #2C3E50;display: inline-block;padding: 5px 10px;background: #4D4D4D;color: #ECF0F1}input[type="submit"]:hover{border: 1px solid #C0392B;background: #E74C3C;color: #ECF0F1;outline:none}ul{list-style:none;margin:0;padding:0;}
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+h3 {
+  font-weight: normal;
+  line-height: 1.1;
+  padding-bottom: 0.4em;
+}
+h1 a,h2 a,h3 a {
+  display: block;
+}
+blockquote{border-left: 0.5em solid #c0392b;padding-left: 1em;margin-left: 1em}body{-webkit-background-size: cover;background-size: cover;min-height: 100%;line-height: 1.5em;font-size: 14px;font-family: 'Montserrat', 'sans-serif';font-weight: normal}body:before{content: "";width: 100%;height: 100%;position: absolute;z-index: -99999999}.wrapper{max-width: 70em;margin: 0 auto;padding: 0 1em;overflow: hidden}.wrapper:before{content: "";display: table}input[type="text"],input[type="password"]{line-height: normal;border: 1px solid #2C3E50;display: block;width: 98%;padding: 5px 2px;background: #34495E;color: #ECF0F1}input[type="submit"]{line-height: normal;border: 1px solid #2C3E50;display: inline-block;padding: 5px 10px;background: #4D4D4D;color: #ECF0F1}input[type="submit"]:hover{border: 1px solid #C0392B;background: #E74C3C;color: #ECF0F1;outline:none}ul{list-style:none;margin:0;padding:0;}
 
 
