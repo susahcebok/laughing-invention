@@ -91,45 +91,6 @@
         });
 
     </script>
-
-    <script>
-        // creamos el cursor
-const cursor = document.createElement('div');
-cursor.style = "position: fixed;top: 0;left: 0;width: 20px;height: 20px;border-radius: 50%;border:3px solid #fff;pointer-events: none;z-index: 9999;transition:all 50ms ease"
-document.body.appendChild(cursor);
-
-// creamos el circulo dentro del cursor
-const circle = document.createElement('span');
-circle.style = "display:block;width: 10px;height: 10px;margin:5px auto;border-radius: 50%;background: rgba(0,0,0,0.5);"
-cursor.appendChild(circle);
-
-// aplicamos el efecto al hacer click
-document.addEventListener("click", mouseEventClick);
-
-// Escucha el evento 'mousemove' en la ventana
-window.addEventListener("mousemove", (e) => {
-	// Obtiene la posición del ratón
-	const x = e.clientX - 10;
-	const y = e.clientY - 10;
-	// Actualiza la posición del círculo
-	cursor.style.transform = `translate(${x}px, ${y}px)`;
-});
-
-// Efecto simple al hacer click
-function mouseEventClick(evt) {
-	evt.preventDefault();
-	circle.style.width = "20px";
-	circle.style.height = "20px";
-	circle.style.margin = "0";
-	circle.style.background = "rgb(253 51 51 / 50%)";
-	let w = setTimeout(() => {
-		circle.style.width = "10px";
-		circle.style.height = "10px";
-		circle.style.margin = "5px auto";
-		circle.style.background = "rgb(0 0 0 / 50%)";
-		clearTimeout(w);
-	}, 50);
-}
-    </script>
+        
 </body>
 </html>
