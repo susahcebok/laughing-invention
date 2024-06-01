@@ -13,7 +13,7 @@
   transition:all 0.5s ease;
 }
 .myModal_show {
-  opacity:1;
+  opacity:6;
   visibility:visible;
   transition:all 0.5s ease;
 }
@@ -39,8 +39,11 @@
 }
 .myModal_content {
   display: block;
-  margin-top: 20px;
-  padding: 15px;
+/*  margin-top: 20px; */
+/*  padding: 15px; */
+  width: 600px;
+margin: 5em auto;
+padding: 2em;
 }
 .myModal_inner {
   position: absolute;
