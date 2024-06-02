@@ -29,7 +29,12 @@
   font-weight: bold;
   cursor: pointer;
 }
-
+#close-modal:hover,
+#close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 @keyframes scale {
   from {
     transform: scale(0);
