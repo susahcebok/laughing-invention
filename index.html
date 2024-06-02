@@ -26,8 +26,10 @@
 <div class="image-upload">
 <label for="fileInput">
 <img id="preview" src="prev.png" alt="Preview Twibbon"/>
+<!--
 <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
 <canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+-->
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
@@ -38,19 +40,21 @@
 </p>
     
 <p>
-<button class="submit blue" onclick = "drawImage()">Unduh</button>
+<button id="myChart" class="submit blue" onclick = "drawImage()">Unduh</button>
 <button class="cancel red" onclick="location.reload()">Cancel</button>
 </p>
 
 <p class="result">Bagikan Twibbon ini ke media sosial Anda: <em>Share.</em></p>
 
-<h2>Modal Example</h2>
 
 <div id="myModal" class="modal">
 
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <p>
+        <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
+        <canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+    </p>
   </div>
 
 </div>
