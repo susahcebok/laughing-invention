@@ -4,8 +4,8 @@
   $('.open_button').on('click', function(e){
     modal.open({
       content: $content,
-      width: 540,
-      height: 270,
+      width: 400,
+      height: 400,
     });
     $content.addClass('modal_content');
     $('.modal, .modal_overlay').addClass('display');
