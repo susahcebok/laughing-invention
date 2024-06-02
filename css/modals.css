@@ -1,25 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Palanquin:700);
 
-html, body {
-  background: #C7E5E6;
-  font-family: 'Helvetica', Arial, sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-h1 {
-  color: #A6A49C;
-  font-family: 'Palanquin', Arial, sans-serif;
-}
-
-p {
-  color: #474544;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 14px;
-}
-
 .modal {
   opacity: 0;
   padding: 50px;
@@ -60,7 +40,6 @@ p {
   opacity: 1;
   visibility: visible;
 }
-
 
 button.modal_close {
   background: #363D4E;
