@@ -114,3 +114,7 @@
   transform: translateY(-2px) rotate(-45deg);
   top: 2px;
 }
+
+.modal_content {
+  max-width: 100%;
+}
