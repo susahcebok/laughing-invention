@@ -97,7 +97,7 @@ body.dragging::before {
   font-weight: 600;
 }
 img, canvas {
-  width: 600px;
+  width: 100%;
 }
 .fa-bars {
   font-size: 21px;
@@ -150,11 +150,11 @@ img, canvas {
   margin: 0 auto;
   margin-top: 32px
 }
-/*
 .main img {
-  max-height: calc(100vh - 92px);
+/*  max-height: calc(100vh - 92px); */
+  max-width: 100;
 }
-*/
+
 .main-not-found {
   font-size: 17px;
   text-align: center;
