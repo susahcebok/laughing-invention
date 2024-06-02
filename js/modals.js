@@ -1,146 +1,59 @@
-var myModal = (function() {
-  'use-strict';
+(function(){
+  var $content = $('.modal_info').detach();
+
+  $('.open_button').on('click', function(e){
+    modal.open({
+      content: $content,
+      width: 540,
+      height: 270,
+    });
+    $content.addClass('modal_content');
+    $('.modal, .modal_overlay').addClass('display');
+    $('.open_button').addClass('load');
+  });
+}());
+
+var modal = (function(){
+
+  var $close = $('<button role="button" class="modal_close" title="Close"><span></span></button>');
+  var $content = $('<div class="modal_content"/>');
+  var $modal = $('<div class="modal"/>');
+  var $window = $(window);
+
+  $modal.append($content, $close);
+
+  $close.on('click', function(e){
+    $('.modal, .modal_overlay').addClass('conceal');
+    $('.modal, .modal_overlay').removeClass('display');
+    $('.open_button').removeClass('load');
+    e.preventDefault();
+    modal.close();
+  });
+
   return {
-    // Basic options
-    options:{
-      'success':'Operation performed successfully <button>OK</button>',
-      'error':'There has been an error, try again'
+    center: function(){
+      var top = Math.max($window.height() - $modal.outerHeight(), 0) / 2;
+      var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
+      $modal.css({
+        top: top + $window.scrollTop(),
+        left: left + $window.scrollLeft(),
+      });
     },
-    // qS(class)
-    qS: function(el) {
-      return document.querySelector(el);
+    open: function(settings){
+      $content.empty().append(settings.content);
+
+      $modal.css({
+        width: settings.width || 'auto',
+        height: settings.height || 'auto'
+      }).appendTo('body');
+
+      modal.center();
+      $(window).on('resize', modal.center);
     },
-    // event handler
-    close: function(el) {
-      var slf = this,
-          cl = this.qS('.myModal_close');
-      cl.addEventListener('click', function() {
-        slf.qS('.myModal').classList.remove('myModal_show');
-        slf.qS('.myModal_inner').classList.remove(el);
-        slf.tmpl('');
-      }, false);
-      return el;
-    },
-    success:function(sc){
-      var s = sc,self = this,
-          inn = this.qS('.myModal_inner');
-      // if not custom text show options text
-      if (typeof sc === 'undefined') {
-        s = self.options.success;}
-      // if contains class
-      if(inn.classList.contains('myModal_error')){
-        inn.classList.remove('myModal_error');
-        // wait 1s and show
-        var t = setTimeout(function(){
-          self.qS('.myModal').classList.add('myModal_show');
-          inn.classList.add('myModal_success');
-          clearTimeout(t);
-        },1000);
-      }else if(inn.classList.contains('myModal_success')){
-        inn.classList.remove('myModal_success');
-        // wait 1s and show
-        var t = setTimeout(function(){
-          self.qS('.myModal').classList.add('myModal_show');
-          inn.classList.add('myModal_success');
-          clearTimeout(t);
-        },1000);
-      }else{
-          this.qS('.myModal').classList.add('myModal_show');
-          inn.classList.add('myModal_success');
-      }
-      // close modal success
-      this.close('myModal_success');
-      // show text
-      this.tmpl(s);
-    },
-    error:function(er){
-      var e = er,
-          self = this,
-          inn = this.qS('.myModal_inner');
-      if (typeof er === 'undefined') {
-        e = self.options.error;}
-      if(inn.classList.contains('myModal_success')){
-        inn.classList.remove('myModal_success');
-        var t = setTimeout(function(){
-          self.qS('.myModal').classList.add('myModal_show');
-          inn.classList.add('myModal_error');
-          clearTimeout(t);
-        },1000);
-      }else if(inn.classList.contains('myModal_error')){
-        inn.classList.remove('myModal_error');
-        var t2 = setTimeout(function(){
-          self.qS('.myModal').classList.add('myModal_show');
-          inn.classList.add('myModal_error');
-          clearTimeout(t2);
-        },1000);
-      }else{
-          this.qS('.myModal').classList.add('myModal_show');
-          inn.classList.add('myModal_error');        
-      }
-      this.close('myModal_error');
-      this.tmpl(e);       
-    },
-    // this.tmpl(element);
-    tmpl: function(e) {
-      this.qS('.myModal_content').innerHTML = e;
-      return e;
+    close: function(){
+      $content.empty();
+      $modal.detach();
+      $(window).off('resize', modal.center);
     }
-  }
-})();
-
-
-// Demos with jquery ( you can use javascript )
-// demo success
-$('.success').on('click',function(){
-  myModal.success(); 
-});
-
-// demo error
-$('.error').on('click',function(){
-  myModal.error(); 
-});
-
-// demo success
-$('.custom').on('click',function(){
-  myModal.success('<p>Change for error <a href="#" onclick="myModal.error(\'And other popup\');" title="">popup</a></p>');  
-});
-
-
-// demo success
-$('.image').on('click',function(){
-  myModal.success('<h3>This is a image</h3>
-                  <p>
-<div class="image-upload">
-<label for="fileInput">
-<img id="preview" src="prev.png" alt="Preview Twibbon"/>
-<img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
-<canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
-</label>
-<input id="fileInput" type="file" accept="image/*">
-</div>
-</p>'); 
-});
-
-// demo login
-$('.login').on('click',function(){
-  var html = '<form action="#"><p><label>Name</label><br><input type="text" name="name"></p><p><label>Password</label><br><input type="password" name="password"></p><p><input type="submit" name="submit" value="submit" onclick="myModal.success()"></p></form>';
-  myModal.success(html); 
-});
-
-// demo various
-$('.various').on('click',function(){
-    myModal.success('<p>Start here <a href="#" onclick="return various()" title="">Click me</a></p>');
-});
-
-var various = function(){
-   myModal.success('This is the first Success');
-    setTimeout(function(){
-    myModal.success('The seccond Success');},3000);
-  setTimeout(function(){
-    myModal.error('The third Error');},6000);
-  setTimeout(function(){
-    myModal.success('Another Success');},9000);
- var f = setTimeout(function(){
-   myModal.success('And finish Close this');
-   clearTimeout(f);},12000);
-}
+  };
+}());
