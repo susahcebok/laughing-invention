@@ -150,9 +150,11 @@ img, canvas {
   margin: 0 auto;
   margin-top: 32px
 }
+/*
 .main img {
   max-height: calc(100vh - 92px);
 }
+*/
 .main-not-found {
   font-size: 17px;
   text-align: center;
