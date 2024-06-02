@@ -9,10 +9,10 @@
 }
 
 .modal-content {
-  margin: 2em auto;
+  margin: auto;
   width: 80%;
   background-color: #fff;
-  padding: 2em;
+  padding: 20px;
   animation: scale 0.5s ease;
   box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
