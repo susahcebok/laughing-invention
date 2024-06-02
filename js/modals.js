@@ -1,25 +1,11 @@
-// Get the modal
-var ebModal = document.getElementById('myModal');
+const modal = document.querySelector(".modal");
+const openModalBtn = document.querySelector("#open-modal");
+const closeModalBtn = document.querySelector("#close-modal");
 
-// Get the button that opens the modal
-var ebBtn = document.getElementById("myChart");
+openModalBtn.addEventListener("click", function () {
+  modal.style.display = "block";
+});
 
-// Get the <span> element that closes the modal
-var ebSpan = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-ebBtn.onclick = function() {
-    ebModal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-ebSpan.onclick = function() {
-    ebModal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == ebModal) {
-        ebModal.style.display = "none";
-    }
-}
+closeModalBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
