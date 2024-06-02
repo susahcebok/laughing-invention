@@ -25,6 +25,7 @@
 
 #close-modal {
   float: right;
+  color: #aaaaaa;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
