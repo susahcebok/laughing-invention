@@ -38,17 +38,9 @@
 <input id="fileInput" type="file" accept="image/*" aria-label="Select the picture you want to use">
 </div><!-- image-upload -->
 </p>
-
-    
-<!--
-<p>
-<span id="output"></span> <a href="#" class="unduh" download="download.png" style="display: none">Klik disini.</a>
-</p>
--->
     
 <p>
 <button id="open-modal" class="submit blue" onclick = "drawImage()">Unduh</button>
-<!--<button class="cancel red" onclick="location.reload()">Cancel</button>-->
 </p>
 
 <!--
@@ -57,29 +49,29 @@
 
 <!--<button id="open-modal">Open Modal</button>-->
 <div class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span id="close-modal">&times;</span>
-      <h3>PFP Generator</h3>
-    </div>
-    <div class="modal-body">
-      <p>
-          <img id="preview" src="prev.png" alt="Preview Twibbon"/>
-          <img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
-          <canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
-      </p>
-        <p>
-            <span id="output"></span> <a href="#" class="unduh" download="download.png" style="display: none">Klik disini.</a>
-        </p>
-        <p>
-            <button class="remake red" onclick="location.reload()">Ganti Foto</button>
-            <button class="share default" onclick="shareCanvas()">Share</button>
-        </p>
-    </div>
-  </div>
+<div class="modal-content">
+<div class="modal-header">
+<span id="close-modal">&times;</span>
+<h3>PFP Generator</h3>
+</div>
+<div class="modal-body">
+<p>
+<img id="preview" src="prev.png" alt="Preview Twibbon"/>
+<img id="twibbon" src="picture.png" alt="Frame Twibbon" style="display: none"/>
+<canvas id="cvs" style="display: none">Your browser does not support the canvas tag.</canvas>
+</p>
+<p>
+<span id="output"></span> <a href="#" class="unduh" download="download.png" style="display: none">Klik disini.</a>
+</p>
+<p>
+<button class="remake red" onclick="location.reload()">Ganti Foto</button>
+<button class="share default" onclick="shareCanvas()">Share</button>
+</p>
+</div>
+</div>
 </div>
     
-</main>    
+</main><!-- main -->    
     
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/modals.js"></script>
