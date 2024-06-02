@@ -153,8 +153,8 @@ body > main {
           <div class="description">
             
               
-<h1>Oops! We couldn’t find that page.</h1>
-<h2>Sorry about that.</h2>
+<h1>Situs ini tidak dapat dijangkau.</h1>
+<h2>Halaman web di <strong><code id="url"></code></strong> mungkin sedang tidak aktif untuk sementara atau dipindahkan secara permanen ke alamat web baru.</h2>
 
             
           </div>
@@ -167,7 +167,10 @@ body > main {
         </div>
       </section>
     </main>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vef91dfe02fce4ee0ad053f6de4f175db1715022073587" integrity="sha512-sDIX0kl85v1Cl5tu4WGLZCpH/dV9OHbA4YlKCuCiMmOQIk4buzoYDZSFj+TvC71mOBLh8CDC/REgE0GX0xcbjA==" data-cf-beacon='{"rayId":"88d4eca3690fbe99","version":"2024.4.1","token":"0b5f665943484354a59c39c6833f7078"}' crossorigin="anonymous"></script>
+  <script>
+      var str = document.documentURI;
+      document.getElementById("url").innerHTML = "" + str;
+   </script>
 </body>
 </html>
 
