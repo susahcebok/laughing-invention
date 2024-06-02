@@ -83,8 +83,7 @@ body.dragging::before {
   content:"Drop the file anywhere on this page";
   position: fixed;
   left: 0;
-/*  width: 100%; */
-  width: 600px;
+  width: 100%;
   top: 0;
   height: 100%;
   display: flex;
@@ -98,7 +97,7 @@ body.dragging::before {
   font-weight: 600;
 }
 img {
-  width: 81px;
+  width: 100%;
 }
 .fa-bars {
   font-size: 21px;
@@ -146,15 +145,15 @@ img {
   cursor: pointer;
   font-size: 19px;
 }
-.video {
-  max-width: 1024px;
+.main {
+  width: 600px;
   margin: 0 auto;
   margin-top: 32px
 }
-.video video {
+.main img {
   max-height: calc(100vh - 92px);
 }
-.video-not-found {
+.main-not-found {
   font-size: 17px;
   text-align: center;
 }
