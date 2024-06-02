@@ -198,4 +198,13 @@ img {
   .legal-item {
     display: initial;
   }
-  .legal-menu{display:none}.body{margin:0}.video{margin-top:32px}}
+  .legal-menu {
+    display: none;
+  }
+  .body {
+    margin: 0;
+  }
+  .video {
+    margin-top: 32px;
+  }
+}
