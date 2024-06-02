@@ -96,8 +96,8 @@ body.dragging::before {
   text-align: center;
   font-weight: 600;
 }
-img {
-  width: 100%;
+img, canvas {
+  max-width: 100%;
 }
 .fa-bars {
   font-size: 21px;
