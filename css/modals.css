@@ -1,116 +1,38 @@
-@import url(https://fonts.googleapis.com/css?family=Palanquin:700);
-
+/* The Modal (background) */
 .modal {
-  opacity: 0;
-  padding: 50px;
-  position: absolute;
-  z-index: 1100;
-  -webkit-transition: opacity 600ms linear 600ms;
-  -moz-transition: opacity 600ms linear 600ms;
-  -ms-transition: opacity 600ms linear 600ms;
-  -o-transition: opacity 600ms linear 600ms;
-  transition: opacity 600ms linear 600ms;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modal_info {
-  background: #FCF9F2;
-  padding: 50px 100px;
-  text-align: center;
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
-.modal_overlay {
-  background: rgba(0, 0, 0, 0.5);
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  overflow: auto;
-  position: fixed;
-  right: 0;
-  top: 0;
-  visibility: hidden;
-  z-index: 900;
-  -webkit-transition: opacity 200ms linear;
-  -moz-transition: opacity 200ms linear;
-  -ms-transition: opacity 200ms linear;
-  -o-transition: opacity 200ms linear;
-  transition: opacity 200ms linear;
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.display {
-  opacity: 1;
-  visibility: visible;
-}
-
-.btn.modal_close {
-  background: #363D4E;
-  border: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  color: #FFFFFF;
-  cursor: pointer;
-  outline: none;
-  width: 52px;
-  height: 52px;
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  -webkit-transition: -webkit-transform 600ms;
-  -moz-transition: -moz-transform 600ms;
-  -ms-transition: -ms-transform 600ms;
-  -o-transition: -o-transform 600ms;
-  transition: transform 600ms;
-}
-
-.btn.modal_close:hover {
-  background: #3E465A;
-  -webkit-transform: rotate(360deg) scale(1.10);
-  -moz-transform: rotate(360deg) scale(1.10);
-  -ms-transform: rotate(360deg) scale(1.10);
-  -o-transform: rotate(360deg) scale(1.10);
-  transform: rotate(360deg) scale(1.10);
-  -webkit-transition: -webkit-transform 600ms;
-  -moz-transition: -moz-transform 600ms;
-  -ms-transition: -ms-transform 600ms;
-  -o-transition: -o-transform 600ms;
-  transition: transform 600ms;
-}
-
-.btn.modal_close span, span:before, span:after {
-  background: #FFFFFF;
-  content: '';
-  cursor: pointer;
-  display: block;
-  height: 2px;
-  position: absolute;
-  width: 20px;
-}
-
-.btn.modal_close span:first-child {
-  background: none;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.btn.modal_close span:before {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.btn.modal_close span:after {
-  -webkit-transform: translateY(-2px) rotate(-45deg);
-  -moz-transform: translateY(-2px) rotate(-45deg);
-  -ms-transform: translateY(-2px) rotate(-45deg);
-  -o-transform: translateY(-2px) rotate(-45deg);
-  transform: translateY(-2px) rotate(-45deg);
-  top: 2px;
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
