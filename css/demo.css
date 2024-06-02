@@ -98,6 +98,7 @@ body.dragging::before {
 }
 img, canvas {
   width: 100%;
+  height: auto;
 }
 .fa-bars {
   font-size: 21px;
