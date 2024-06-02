@@ -97,7 +97,7 @@ body.dragging::before {
   font-weight: 600;
 }
 img, canvas {
-  max-width: 100%;
+  width: 600px;
 }
 .fa-bars {
   font-size: 21px;
@@ -211,7 +211,7 @@ img, canvas {
   }
 }
 @media (max-width: 700px) {
-        body, .body {
+        body, .body, img, canvas {
             margin: 0 auto;
             width: auto;
         }
