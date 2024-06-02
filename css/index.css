@@ -132,6 +132,11 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
+#dropbox {
+border: grey dashed;
+padding: 1em;
+margin-bottom: 1em;
+}
 /* cookies */
 .cookiePolicy {
 box-sizing: border-box;
