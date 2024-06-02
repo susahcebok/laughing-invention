@@ -15,7 +15,7 @@
 
 var modal = (function(){
 
-  var $close = $('<button role="button" class="modal_close" title="Close"><span></span></button>');
+  var $close = $('<button role="button" class="btn modal_close" title="Close"><span></span></button>');
   var $content = $('<div class="modal_content"/>');
   var $modal = $('<div class="modal"/>');
   var $window = $(window);
