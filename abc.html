@@ -72,17 +72,12 @@
     domain in literature without prior coordination or asking for permission.</p>
     
     <p>
-    <div class="image-upload">
-    <label for="inputbtn">
-    <div id="dropbox" aria-label="File Selection Section">
-    Letakkan file gambar di sini atau klik untuk mengunggah.
-    </div><!-- dropbox -->
-    </label>
-    <input id="inputbtn" type="file" accept="image/*" aria-label="Select the picture you want to use">
-    </div><!-- image-upload -->
+    <button class="default" id="inputbtn" onclick="$('#inputbtn').click()">Upload Foto</button>
+    <input id="inputbtn" type="file" accept="image/*" aria-label="Select the picture you want to use" hidden>
     <!--<button id="inputbtn">Upload Fotomu Disini</button>-->
     <div id="canvas"></div>
     </p>
+	
     <p>
     <button onclick="download()">Download</button>
     <button onclick="remake()">Reset</button>
