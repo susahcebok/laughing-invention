@@ -80,8 +80,7 @@
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn').accept = "image/*";
 			  // create canvas
-			 // var c = createCanvas(400, 400);
-			var c createCanvas(windowWidth, windowHeight);
+			  var c = createCanvas(300, 300);
 			  background('#fdfdff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
@@ -94,24 +93,9 @@
 		  noStroke();
 		  textSize(14);
 		  textAlign(CENTER);
-		  text('Fotomu akan Muncul disini', width/2, height/2);
+		  text('Fotomu akan Muncul disini', 0, 0, width/2, height/2);
 		  noLoop();
-		fill(255, 0, 0);
-    rect(0, 0, width/2, height/2);
-
-    fill(0, 255, 0);
-    rect(width/2, 0, width/2, height/2);
-
-    fill(0, 0, 255);
-    rect(0, height/2, width/2, height/2);
-
-    fill(255, 255, 0);
-    rect(width/2, height/2, width/2, height/2);
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+		}
 
 		function remake() {
 			background('#fff');
