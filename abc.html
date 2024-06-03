@@ -74,6 +74,7 @@
 		function setup() {
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn');
+			uploadBtn.setAttribute("type", "image");
 			  // create canvas
 			  var c = createCanvas(500, 500);
 			  background('#fff');
