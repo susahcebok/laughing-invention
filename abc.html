@@ -79,11 +79,45 @@
 		   mask = loadImage('picture.png');
 		}
 
+	    sketch.js
+1
+function setup() {
+2
+  createCanvas(windowWidth, windowHeight);
+3
+  rectMode(CENTER);
+4
+}
+5
+​
+6
+function draw() {
+7
+  background(220);
+8
+  console.log(width);
+9
+  rect(width / 2, height / 2, width / 2, height / 2);
+10
+}
+11
+​
+12
+function windowResized() {
+13
+  resizeCanvas(windowWidth, windowHeight);
+14
+}
+15
+​
+
 		function setup() {
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn');
 			  // create canvas
-			  var c = createCanvas(300, 300);
+			//  var c = createCanvas(300, 300);
+			var c = createCanvas(windowWidth, windowHeight);
+			  rectMode(CENTER);
 			  background('#fdfdff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
