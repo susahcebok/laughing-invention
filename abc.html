@@ -79,7 +79,7 @@
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn').accept = "image/*";
 			  // create canvas
-			  var c = createCanvas(500, 500);
+			  var c = createCanvas(300, 300);
 			  background('#fdfdff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
@@ -88,11 +88,11 @@
 
 		function draw() {
 		  
-		  fill(255, 0, 0);
+		  fill(0);
 		  noStroke();
 		  textSize(14);
 		  textAlign(left);
-		  text('Fotomu akan Muncul disini', 0, 0, width/2, height/2);
+		  text('Fotomu akan Muncul disini', 0, width/2, 0, height/2);
 		  noLoop();
 		}
 
