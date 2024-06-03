@@ -79,14 +79,7 @@
 		   mask = loadImage('picture.png');
 		}
 
-	    sketch.js
-1
-function setup() {
-2
-  createCanvas(windowWidth, windowHeight);
-3
-  rectMode(CENTER);
-4
+	    
 }
 5
 ​
@@ -125,12 +118,13 @@ function windowResized() {
 		}
 
 		function draw() {
-		  
+		  rect(width / 2, height / 2, width / 2, height / 2);
+		  console.log(width);
 		  fill(0);
 		  noStroke();
 		  textSize(14);
 		  textAlign(center);
-		  text('Fotomu akan Muncul disini', 0, width/2, 0, height/2);
+		  text('Fotomu akan Muncul disini', width/2, height/2);
 		  noLoop();
 		}
 
