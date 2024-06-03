@@ -81,7 +81,7 @@
 
 		function setup() {
 			var uploadBtn = createFileInput(imageUpload);
-			uploadBtn.parent('inputbtn').accept = "image/*";
+			uploadBtn.parent('inputbtn');
 			  // create canvas
 			  var c = createCanvas(300, 300);
 			  background('#fdfdff');
@@ -95,7 +95,7 @@
 		  fill(0);
 		  noStroke();
 		  textSize(14);
-		  textAlign(left);
+		  textAlign(center);
 		  text('Fotomu akan Muncul disini', 0, width/2, 0, height/2);
 		  noLoop();
 		}
