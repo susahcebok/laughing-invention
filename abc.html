@@ -35,7 +35,7 @@
         display: block;
         cursor: pointer;
     }
-    img, canvas, #canvas, .cvs {
+    img, canvas, #canvas {
         width: 100%;
         height: auto
 	display: block;
@@ -68,7 +68,7 @@
     <button id="inputbtn">Upload Fotomu Disini</button>
     <input id="inputbtn" type="file" accept="image/*">
 
-    <div class="cvs" id="canvas"></div>
+    <div id="canvas"></div>
     </p>
 	
     <p>
@@ -85,7 +85,7 @@ function setup() {
 var uploadBtn = createFileInput(imageUpload);
 uploadBtn.parent('inputbtn');
 // create canvas
-var c = createCanvas(500, 500);
+var c = createCanvas(300, 300);
 background('#fdfdff');
 c.parent('canvas');
 // Add an event for when a file is dropped onto the canvas
