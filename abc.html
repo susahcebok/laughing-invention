@@ -35,6 +35,10 @@
         margin: 50px auto;
         cursor: pointer;
     }
+    img, canvas {
+        width: 100%;
+        height: auto
+    }
     @media (max-width: 700px) {
         main {
             margin: 0 auto;
@@ -49,7 +53,10 @@
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+    <p>
+    <button id="inputbtn">Upload Fotomu Disini</button>
+	<div id="canvas"></div>
+    </p>
 </main>
 </body>
 </html>
