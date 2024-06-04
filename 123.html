@@ -146,8 +146,7 @@ width: auto;
 <p>
 <button class="send" onclick="drawImage()">Unduh</button>
 <a href="#" class="unduh" download="download.png" style="display: none">Download</a>
-<button id="cancel" onclick="location.reload()">Cancel</button>  
-<button onclick="remake()">Reset</button>
+<button id="reset" onclick="location.reload()">Reset</button>  
 </p>
 </main>
 
@@ -190,10 +189,7 @@ $("#fileInput").change(function() {
   readURL(this);
 });
 
-function remake() {
-background('#fff');
-redraw();
-}
+
 </script>
 </body>
 </html>
