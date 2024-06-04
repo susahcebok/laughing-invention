@@ -130,10 +130,23 @@ width: auto;
 <body>
 <main>
   
-<h1>404</h1>
-<p>Halaman tidak ditemukan!<br></p>
-<p>Halaman <strong><code id="url"></code></strong> yang dicari tidak ada atau sudah dipindahkan.</p>
+<h1>Twibbon Generator</h1>
+<p>Upload gambar yang ingin di jadikan twibbon lalu klik 'Buat twibbon!'.</p>
+<p>Klik kanan dan save untuk PC atau sentuh dan tahan lalu download image untuk smartphone.</p>
+
+<p>
+<img id="preview" src="no-image.png"/>
+<img id="twibbon" src="twibbon.png" style="display: none"/>
+    <br/>
+<p>Pastikan gambar yang di upload memiliki ukuran</p>
+<input id="fileInput" type="file" />  
+</p>
   
+  <canvas id="twibbonbaker" style="width: 300px; height: 300px; display: none"></canvas>
+  <br/>
+  <button id="dpwload" onclick="drawImage()">Buat twibbon!</button>
+  <a href="#" id="dpwload2" download="download.png" style="display: none">Download twibbon!</a>
+  <button id="cancel" onclick="location.reload()">Cancel</button>  
 </main>
 
 <script>
