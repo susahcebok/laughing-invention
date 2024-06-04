@@ -26,19 +26,18 @@
         <div class="text-mono">404</div>
         <div class="utility-content">
             <h1>Halaman tidak ditemukan<br></h1>
-            <p>Halaman yang dicari tidak ada atau sudah dipindahkan.</p>
+            <p>Halaman <strong><code id="url"></code></strong> yang dicari tidak ada atau sudah dipindahkan.</p>
         </div>
         <div></div>
     </div>
 </div>
-</body>
 
-</html>
-
-  <script>
+    <script>
       var str = document.documentURI;
       document.getElementById("url").innerHTML = "" + str;
    </script>
+</body>
+</html>
 
 
 
