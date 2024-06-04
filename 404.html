@@ -106,10 +106,15 @@ padding: 0;
 }
 
 /* Custom Styles */
-
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
+background-color: #fdfdff;
+}
 
 @media (max-width: 700px) {
-body {
+main {
 margin: 0 auto;
 width: auto;
 }
@@ -119,17 +124,15 @@ width: auto;
 </head>
 
 <body>
-<div class="utility-wrapper">
-<div class="utility-container">
-<div class="text-mono">404</div>
-<div class="utility-content">
-<h1>Halaman tidak ditemukan<br></h1>
+<main>
+  
+<h1>404</h1>
+<p>Halaman tidak ditemukan<br></p>
 <p>Halaman <strong><code id="url"></code></strong> yang dicari tidak ada atau sudah dipindahkan.</p>
-</div>
-<div></div>
-<button> Beranda</button>
-</div>
-</div>
+
+<p><button> Beranda</button></p>
+  
+</main>
 
 <script>
 var str = document.documentURI;
