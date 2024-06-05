@@ -31,10 +31,10 @@
         display: block;
         font: 1rem 'Fira Sans', sans-serif;
     }
-    input, label, pre {
+    input, label, textarea {
         margin: 0.4rem 0;
     }
-    input, pre { 
+    input, textarea { 
         max-width: 100%;
         padding: 10px;
         font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
@@ -65,7 +65,7 @@
     <input type="button" onclick="generate()" value="Submit">
     <p id="freview" style="display:block;">Hasilnya akan muncul disini..</p>
     <div id="fenrslt">
-    <pre id="theResult" contenteditable=""></pre>
+    <textarea id="theResult" contenteditable=""></textarea>
     </div>
 </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
