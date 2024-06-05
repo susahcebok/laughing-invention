@@ -14,7 +14,7 @@
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         
     }
-    main {
+    div {
         width: 600px;
         margin: 5em auto;
         padding: 2em;
@@ -26,119 +26,21 @@
         color: #38488f;
         text-decoration: none;
     }
-    button {
-	display: inline-block;
-        border:none;
-        background: #ddd;
-        border-radius: 4px;
-        padding: 6px 12px;
-        display: block;
-        cursor: pointer;
-    }
-    img, canvas, #canvas {
-        width: 100%;
-        height: auto
-	display: block;
-    }
-    #inputbtn {
-	display: block; 
-    }
     @media (max-width: 700px) {
-        main {
+        div {
             margin: 0 auto;
             width: auto;
         }
     }
     </style>    
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
-	
 </head>
 
 <body>
-<main>
+<div>
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-    
-    <p>
-    <!--
-    <button class="default" id="inputbtn" onclick="$('#inputbtn').click()">Upload Foto</button>
-    <button id="inputbtn">Upload Fotomu Disini</button>
-    -->
-    <input class="button default" id="inputbtn" type="file" accept="image/*">
-
-    <div id="canvas"></div>
-    </p>
-	
-    <p>
-    <button onclick="download()">Download</button>
-    <button onclick="remake()">Reset</button>
-    </p>
-</main>
-<script>
-function preload() {
-mask = loadImage('picture.png');
-}
-
-function setup() {
-var uploadBtn = createFileInput(imageUpload);
-uploadBtn.parent('inputbtn');
-// create canvas
-var c = createCanvas(300, 300);
-background('#fdfdff');
-c.parent('canvas');
-// Add an event for when a file is dropped onto the canvas
-c.drop(gotFile);
-}
-
- function draw() {
- fill(0);
- noStroke();
- textSize(14);
- textAlign(CENTER);
- text('Hello World!', width/2, height/2);
- noLoop();
- }
-
-function remake() {
-background('#fff');
-redraw();
-}
-
-// function changeColor() {
-// 	image(img, mouseX, mouseY, img.width, img.height);
-// }
-
-function download() {
-saveCanvas("twibbon", 'jpg');
-}
-
-function gotFile(file) {
-// If it's an image file
-if (file.type === 'image') {
-// Create an image DOM element but don't show it
-background('#fff');
-redraw();
-var img = createImg(file.data).hide();
-// Draw the image onto the canvas
-image(img, 0, 0, width , height);
-
-		   
-image(mask, 0, 0, width, height);
-} else {
-println('Not an Photos file!');
-}
-}
-
-function imageUpload(file){
-img = loadImage(file.data,function(){
-background('#fff');
-redraw();
-image(img, 0, 0, width , height);
-image(mask,0,0,width,height);
-})        
-}		
-</script>
+    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</div>
 </body>
 </html>
