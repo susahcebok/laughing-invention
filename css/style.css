@@ -1,0 +1,136 @@
+html {
+font-family: sans-serif;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+body {
+margin: 0;
+letter-spacing: 1px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+display: block;
+}
+
+a {
+background-color: transparent;
+text-decoration: none;
+}
+
+a:active,
+a:hover {
+outline: 0;
+}
+
+b,
+strong {
+font-weight: bold;
+}
+
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+
+img, canvas {
+border: 0;
+width: 100%;
+height: auto;
+}
+
+svg:not(:root) {
+overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+color: inherit;
+/* 1 */
+font: inherit;
+/* 2 */
+margin: 0;
+/* 3 */
+}
+
+button {
+border: none;
+background: #ddd;
+padding: 6px 12px;
+overflow: visible;
+cursor: pointer;
+text-transform: uppercase;
+}
+
+button,
+select {
+text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"] {
+-webkit-appearance: button;
+cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+
+/* Custom Styles */
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
+/* background-color: #fdfdff; */
+animation: fadeInUp 1s ease;
+}
+
+.image-upload > input {
+display: none;
+}
+.image-upload img {
+width: 100%;
+cursor: pointer;
+}
+  
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+  
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
+}
