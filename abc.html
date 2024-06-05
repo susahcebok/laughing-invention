@@ -31,10 +31,10 @@
         display: block;
         font: 1rem 'Fira Sans', sans-serif;
     }
-    input, label, textarea {
+    input, label, textarea, button {
         margin: 0.4rem 0;
     }
-    input, textarea { 
+    input, textarea, button { 
         max-width: 100%;
         padding: 10px;
         font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
@@ -65,7 +65,7 @@
     <input type="button" onclick="generate()" value="Submit">
     <p id="freview" style="display:block;">Hasilnya akan muncul disini..</p>
     <div id="fenrslt">
-    <textarea id="theResult" contenteditable=""></textarea>
+    <p id="theResult" contenteditable=""></p>
     <button id="copy">Salin Teks</button>
     </div>
 </main>
