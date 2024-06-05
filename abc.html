@@ -31,10 +31,10 @@
         display: block;
         font: 1rem 'Fira Sans', sans-serif;
     }
-    input, label, textarea, button, pre {
+    input, label, button, pre, textarea {
         margin: 0.4rem 0;
     }
-    input, textarea, button, pre { 
+    input, button, pre, textarea { 
         max-width: 100%;
         padding: 10px;
         font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
@@ -42,7 +42,6 @@
         font-weight: normal;
         text-decoration: inherit;
     }
-
     @media (max-width: 700px) {
         main {
             margin: 0 auto;
@@ -67,7 +66,7 @@
     <p id="freview" style="display:block;">Hasilnya akan muncul disini..</p>
     <div id="fenrslt">
     <div style="max-width:100%;overflow:auto">
-    <pre id="theResult" readonly></pre>
+    <textarea id="theResult" rows="5" cols="33">></textarea>
     </div>
     <button id="copy">Salin Teks</button>
     </div>
