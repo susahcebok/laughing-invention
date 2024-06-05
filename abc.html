@@ -83,14 +83,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="js/readmore.js"></script>
     <script>
-    function copy() {
-  let copyText = document.querySelector("#theResult");
-  copyText.select();
-  document.execCommand("copy");
-}
-
-document.querySelector("#copy").addEventListener("click", copy);
-
+        function copy() {
+            let copyText = document.querySelector("#theResult");
+            copyText.select();
+            document.execCommand("copy");
+        }
+        document.querySelector("#copy").addEventListener("click", copy);
     </script>
 </body>
 </html>
