@@ -74,12 +74,12 @@ background: #ddd;
 padding: 6px 12px;
 overflow: visible;
 cursor: pointer;
-text-transform: uppercase;
+border-radius: 4px;
 }
 
 button,
 select {
-text-transform: none;
+text-transform: uppercase;
 }
 
 button,
