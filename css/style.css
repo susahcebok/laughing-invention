@@ -92,9 +92,7 @@ cursor: pointer;
 }
 
 .image-upload img:hover {
-  border: grey dashed;
-  padding: 1em;
-  margin-bottom: 1em;
+border: grey dashed;
 }
 
 @keyframes fadeInUp {
