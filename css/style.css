@@ -93,7 +93,6 @@ cursor: pointer;
 
 .image-upload img:hover {
 border: grey dashed;
-background-color: #ddd;
 }
 
 @keyframes fadeInUp {
