@@ -1,32 +1,13 @@
-html {
+body {
+margin: 0;
+letter-spacing: 1px;
 font-family: sans-serif;
 -ms-text-size-adjust: 100%;
 -webkit-text-size-adjust: 100%;
 }
 
-body {
-margin: 0;
-letter-spacing: 1px;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-display: block;
-}
-
 a {
-/* background-color: transparent; */
+background-color: transparent; 
 text-decoration: none;
 }
 
@@ -51,15 +32,8 @@ width: 100%;
 height: auto;
 }
 
-svg:not(:root) {
-overflow: hidden;
-}
-
 button,
-input,
-optgroup,
-select,
-textarea {
+input {
 color: inherit;
 /* 1 */
 font: inherit;
