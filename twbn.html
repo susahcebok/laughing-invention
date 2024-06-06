@@ -88,7 +88,7 @@
 <pre id="value">value</pre>
 <div id="container" class="C">
 <p>Upload gambar terbaik Anda dan letakkan file gambar dibawah atau klik untuk mengunggah.</p>
-
+<br>
 <p>
     <div class="image-upload">
         <label for="fileInput">
@@ -100,8 +100,10 @@
     </div>
 </p>
 
+<br>
 <span id="output"></span> <a href="#" class="unduh" download="download.png" style="display: none">Klik disini.</a>
-  
+<br> 
+
 <p>
     <button class="send" onclick="drawImage()">Unduh</button>
     <!--<a href="#" class="unduh" download="download.png" style="display: none">Download</a>-->
@@ -135,8 +137,7 @@ function drawImage() {
   var picture = document.getElementById('preview');
   var canvas = document.getElementById('cvs');
   var context = canvas.getContext('2d');
-  var erorr = document.getElementById('output');
-
+  
   canvas.width = 1024;
   canvas.height = 1024;
   context.drawImage(picture, 0, 0, canvas.width, canvas.height);
