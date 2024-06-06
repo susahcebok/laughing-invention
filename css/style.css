@@ -1,21 +1,23 @@
 body {
-        background-color: #fdfdff;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
-    }
-    main {
-        width: 600px;
-        margin: 5em auto;
-        padding: 2em;
-        background-color: #fdfdff;
-        animation: fadeInUp 1s ease;
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
+background-color: #fdfdff;
+margin: 0;
+padding: 0;
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
+background-color: #fdfdff;
+animation: fadeInUp 1s ease;
+}
+
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
+}
+
 b,
 strong {
 font-weight: bold;
