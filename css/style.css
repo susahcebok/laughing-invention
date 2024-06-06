@@ -2,8 +2,6 @@ body {
 margin: 0;
 letter-spacing: 1px;
 font-family: sans-serif;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
 }
 
 a {
