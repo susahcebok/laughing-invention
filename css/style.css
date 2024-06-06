@@ -85,11 +85,16 @@ padding: 0;
 .image-upload > input {
 display: none;
 }
+
 .image-upload img {
 width: 100%;
 cursor: pointer;
 }
-  
+
+.image-upload img:hover {
+  border; 1px solid dashed;
+}
+
 @keyframes fadeInUp {
 from {
 opacity: 0;
