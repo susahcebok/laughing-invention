@@ -10,6 +10,7 @@ body {
         margin: 5em auto;
         padding: 2em;
         background-color: #fdfdff;
+        animation: fadeInUp 1s ease;
     }
     a:link, a:visited {
         color: #38488f;
@@ -74,13 +75,6 @@ padding: 0;
 }
 
 /* Custom Styles */
-main {
-width: 600px;
-margin: 5em auto;
-padding: 2em;
-/* background-color: #fdfdff; */
-animation: fadeInUp 1s ease;
-}
 
 .image-upload > input {
 display: none;
