@@ -32,12 +32,6 @@ function drawImage() {
   $('.unduh').attr('href', hasil);
 }
 
-var win = window.open('', '_blank');
-    win.document.write('<img style="box-shadow: 0 0 1em 0 dimgrey;" src="' + img + '"/>');
-    win.document.write('<h1 style="font-family: Helvetica; font-weight: 300">Right Click > Save As<h1>');
-    win.document.body.style.padding = '1em';
-};
-
 $("#fileInput").change(function() {
   readURL(this);
 $('#value').text(this.value.replace(/C:\\fakepath\\/i, ''));
@@ -52,3 +46,9 @@ $('.submit').bind("click",function() {
     output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
   }
 }); 
+
+var win = window.open('', '_blank');
+    win.document.write('<img style="box-shadow: 0 0 1em 0 dimgrey;" src="' + img + '"/>');
+    win.document.write('<h1 style="font-family: Helvetica; font-weight: 300">Right Click > Save As<h1>');
+    win.document.body.style.padding = '1em';
+};
