@@ -41,7 +41,7 @@ $('.send').bind("click",function() {
   var imgVal = $('#fileInput').val(); 
   if(imgVal=='') 
   { 
-    output.innerHTML = "Tidak ada file gambar yang dipilih, lanjut unduh? ";
+    output.innerHTML = "Tidak ada file gambar yang dipilih, lanjut unduh? <a href="#" class="unduh" download="download.png" style="display: none">Download</a>";
   } else {
     output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
   }
