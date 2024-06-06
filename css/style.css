@@ -87,6 +87,7 @@ display: none;
 }
 
 .image-upload img {
+background-color: #ddd;
 width: 100%;
 cursor: pointer;
 }
