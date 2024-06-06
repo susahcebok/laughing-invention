@@ -23,6 +23,10 @@ strong {
 font-weight: bold;
 }
 
+p {
+  line-height: 1.6;
+}
+
 h1 {
 font-size: 2em;
 margin: 0.67em 0;
