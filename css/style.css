@@ -41,7 +41,7 @@ margin: 0.67em 0;
 
 img, canvas {
 border: 0;
-max-width: 100%;
+width: 100%;
 height: auto;
 }
 
@@ -94,7 +94,7 @@ display: none;
 }
 
 .image-upload img {
-max-width: 100%;
+width: 80%;
 cursor: pointer;
 }
 
