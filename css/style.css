@@ -100,7 +100,7 @@ cursor: pointer;
 }
 
 .image-upload img:hover {
-border: grey dashed;
+border: 10px grey dashed;
 }
 
 .a {
