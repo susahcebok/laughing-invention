@@ -27,7 +27,7 @@ function drawImage() {
 
   console.log("Drew!");
   document.getElementById("share").innerHTML =
-  '<button onclick="shareCanvas()">Share</button>';
+  '<button onclick="shareCanvas()">Share</button> <button id="reset" onclick="location.reload()">Ganti Foto</button>';
 
   $('.send').css('display', 'none');
   $('.unduh').css('display', 'inline-block');
