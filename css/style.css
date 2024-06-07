@@ -14,9 +14,10 @@ animation: fadeInUp 1s ease;
 }
 
 footer {
-  margin: 0 auto 2em auto;
-  text-align: center;
-  background-color: #f0f0f2;
+color: inherit;
+margin: 0 auto 2em auto;
+text-align: center;
+background-color: #f0f0f2;
 }
 
 a:link, a:visited {
