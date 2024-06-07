@@ -99,10 +99,6 @@ width: 100%;
 cursor: pointer;
 }
 
-.image-upload img:hover {
-border: 10px grey dashed;
-}
-
 .a {
   animation-duration: 1s;
   animation-fill-mode: both;
