@@ -26,7 +26,7 @@ function drawImage() {
   document.getElementById('preview').src = hasil;
 
   console.log("Drew!");
-  document.getElementById("add").innerHTML =
+  document.getElementById("share").innerHTML =
   '<button onclick="shareCanvas()">Share</button>';
 
   $('.send').css('display', 'none');
