@@ -10,7 +10,7 @@ width: 600px;
 margin: 4em auto;
 padding: 3em;
 background-color: #fdfdff;
-animation: fadeInUp 1s ease;
+/* animation: fadeInUp 1s ease; */
 }
 
 footer {
@@ -101,6 +101,23 @@ cursor: pointer;
 
 .image-upload img:hover {
 border: grey dashed;
+}
+
+.a {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.b {
+  opacity: 0;
+}
+
+.c {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }
 
 /*
