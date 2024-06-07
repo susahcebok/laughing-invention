@@ -27,7 +27,7 @@ function drawImage() {
 
   console.log("Drew!");
   document.getElementById("add").innerHTML =
-  '<div onclick="closeHomeScreenPopup()"><span class="plush--sign">+</span><p>Install the webapp on your iPhone:tap <img style="width: 20px; margin: 0 4px;" alt="" src="img/share_icon.png"/> and then Add to homescreen.</p></div>';
+  '<button onclick="shareCanvas()">Share</button>';
 
   $('.send').css('display', 'none');
   $('.unduh').css('display', 'inline-block');
