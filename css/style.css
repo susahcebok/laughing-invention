@@ -45,6 +45,11 @@ width: 100%;
 height: auto;
 }
 
+.upload {
+width: 200px;
+height: 200px;
+}
+
 button,
 input {
 color: inherit;
