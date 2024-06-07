@@ -135,7 +135,7 @@ transform: translateY(0);
 
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,3px,0)
+        transform: translate3d(0,40px,0)
     }
 
     to {
@@ -146,7 +146,7 @@ transform: translateY(0);
 
 @-webkit-keyframes fadeInUp {
     from {
-        transform: translate3d(0,3px,0)
+        transform: translate3d(0,40px,0)
     }
 
     to {
