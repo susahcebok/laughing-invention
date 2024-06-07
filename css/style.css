@@ -5,12 +5,17 @@ padding: 0;
 font-family: monospace;
 }
 
-main {
+main, footer {
 width: 600px;
 margin: 4em auto;
 padding: 3em;
 background-color: #fdfdff;
 animation: fadeInUp 1s ease;
+}
+
+footer {
+  text-align: center;
+  background-color: #f0f0f2;
 }
 
 a:link, a:visited {
