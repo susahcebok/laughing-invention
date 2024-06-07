@@ -30,6 +30,8 @@ function drawImage() {
   $('.send').css('display', 'none');
   $('.unduh').css('display', 'inline-block');
   $('.unduh').attr('href', hasil);
+
+  document.getElementById("share").innerHTML = "<button>Share</button>";
 }
 
 $("#fileInput").change(function() {
