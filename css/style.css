@@ -23,6 +23,7 @@ background-color: #f0f0f2;
 a:link, a:visited {
 color: #38488f;
 text-decoration: none;
+cursor: pointer;
 }
 
 b,
@@ -43,11 +44,6 @@ img, canvas {
 border: 0;
 width: 100%;
 height: auto;
-}
-
-.upload {
-width: 200px;
-height: 200px;
 }
 
 button,
