@@ -55,17 +55,20 @@
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
     <p>
-    <input type="file" id="fileInput" accept="image/*">
+    <div class="image-upload">
+    <input type="file" id="fileInput" accept="image/*">   
+    <canvas id="canvas"></canvas>
+    </div>
     </p>
 
     <p>
     <button type="submit" onclick="generate()" class="btn">Generate</button>
     </p>
-	
+    <!--
     <p>
     <canvas id="canvas"></canvas>
     </p>
-	
+    -->
     <p>
     <button onclick="download()" id="download" disabled>Download</button>
     <button onclick="location.reload()">Reset</button>
