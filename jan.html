@@ -79,7 +79,7 @@ domain in literature without prior coordination or asking for permission.</p>
 <p>
 <button type="submit" onclick="generate()" class="btn">Generate</button>  
 <button onclick="download()" id="download" disabled>Download</button>
-<button onclick="location.reload()">Reset</button>
+<button id="remake">Reset</button>
 </p>
 </main>
 
@@ -167,11 +167,31 @@ init();
 </script>
 	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--
 <script>
 $('#fileInput').on('change',function(event){
 var name = event.target.files[0].name;
 $('#value').text(name);
  })
+</script>
+-->
+<script>
+// Referneces
+var control = $("#fileInput"),
+    clearBn = $("#remake");
+
+// Setup the clear functionality
+clearBn.on("click", function(){
+    control.replaceWith( control.val('').clone( true ) );
+});
+
+// Some bound handlers to preserve when cloning
+control.on({
+    change: function(){ console.log( "Changed" ) },
+     focus: function(){ console.log(  "Focus"  ) }
+});
+
+
 </script>
 </body>
 </html>
