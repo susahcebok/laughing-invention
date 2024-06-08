@@ -68,12 +68,8 @@
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn');
 			  // create canvas
-			//  var c = createCanvas();
-			  var c = document.getElementById("canvas");
-			  var ctx = canvas.getContext("2d");
-			// ctx.fillStyle = "blue";
-			ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+			  var c = createCanvas(500, 500);
+			  
 			  background('#fff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
