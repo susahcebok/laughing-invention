@@ -22,8 +22,8 @@ function drawImage() {
   context.drawImage(picture, 0, 0, canvas.width, canvas.height);
   context.drawImage(twibbon, 0, 0, canvas.width, canvas.height);
 
-  context.fillStyle = "gray";
-  context.fillRect(0, 0, canvas.width, canvas.height);
+  canvas.fillStyle = "gray";
+  canvas.fillRect(0, 0, canvas.width, canvas.height);
   
   var hasil = canvas.toDataURL("image/png");
   document.getElementById('preview').src = hasil;
