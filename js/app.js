@@ -29,6 +29,9 @@ function drawImage() {
   document.getElementById("share").innerHTML =
   '<button onclick="shareCanvas()">Share</button> <button onclick="location.reload()">Ganti Foto</button>';
 
+  document.getElementById("note").innerHTML =
+  '<small><strong>Catatan</strong>: Aplikasi ini berjalan murni di browser Anda. Tidak ada gambar atau data yang akan disimpan oleh aplikasi.</small>';
+
   $('.send').css('display', 'none');
   $('.unduh').css('display', 'inline-block');
   $('.unduh').attr('href', hasil);
