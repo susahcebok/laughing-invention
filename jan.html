@@ -62,7 +62,7 @@ width: auto;
 <h1>Example Domain</h1>
 <p>This domain is for use in illustrative examples in documents. You may use this
 domain in literature without prior coordination or asking for permission.</p>
-<!--
+
 <p>
 <div class="box">
 <div class="image-upload">
@@ -71,15 +71,6 @@ domain in literature without prior coordination or asking for permission.</p>
 <canvas id="cvs"></canvas>
 </label>
 </div>
-</div>
-</p>
--->
-
-<p>
-<div class="box">
-<input type="file" id="fileInput" accept="image/*">
-<br>
-<canvas id="cvs"></canvas>
 </div>
 </p>
 	
@@ -177,31 +168,13 @@ init();
 </script>
 	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--
+
 <script>
 $('#fileInput').on('change',function(event){
 var name = event.target.files[0].name;
 $('#value').text(name);
  })
 </script>
--->
-<script>
-// Referneces
-var control = $("#fileInput"),
-    clearBn = $("#remake");
 
-// Setup the clear functionality
-clearBn.on("click", function(){
-    control.replaceWith( control.val('').clone( true ) );
-});
-
-// Some bound handlers to preserve when cloning
-control.on({
-    change: function(){ console.log( "Changed" ) },
-     focus: function(){ console.log(  "Focus"  ) }
-});
-
-
-</script>
 </body>
 </html>
