@@ -41,12 +41,12 @@
 </head>
 
 <body>
-<main>
+<main id="main">
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
     <p>
-    <input type="file" name="image_input" id="image_input" accept="image/*">
+    <input type="file" id="fileInput" accept="image/*">
     </p>
 
     <p>
@@ -71,7 +71,7 @@ let btnDownload = document.getElementById('download');
 let reader = new FileReader();
 let target = new Image();
 let target2 = new Image();
-let image = document.getElementById('image_input');
+let image = document.getElementById('fileInput');
 
 c.canvas.width = 1024;
 c.canvas.height = 1024;
