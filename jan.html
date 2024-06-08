@@ -73,7 +73,7 @@ domain in literature without prior coordination or asking for permission.</p>
 </div>
 </p>
 
-<p id="output"></p>
+<p id="alert"></p>
 	
 <p>
 <button type="submit" onclick="generate()" class="btn">Generate</button>  
@@ -153,7 +153,7 @@ btnDownload.removeAttribute('disabled');
 let generate = () => {
     	
 if(image.files[0] === undefined) 
-output.innerHTML = "Gambar kosong! ";
+alert.innerHTML = "Gambar kosong! ";
 else{
 destroyInterval();                               
 imageReaderOnLoad();
