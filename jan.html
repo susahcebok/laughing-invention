@@ -1,157 +1,157 @@
 <!doctype html>
 <html>
 <head>
-    <title>Example Domain</title>
+<title>Example Domain</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style type="text/css">
+body {
+background-color: #f0f0f2;
+margin: 0;
+padding: 0;
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         
-    }
-    main {
-        width: 600px;
-        margin: 5em auto;
-        padding: 2em;
-        background-color: #fdfdff;
-        border-radius: 0.5em;
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    img, canvas {
-	width: 100%;
-	height: auto;
-    }
-    .image-upload > input {
-	display: none;
-    }
+}
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
+background-color: #fdfdff;
+border-radius: 0.5em;
+box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+}
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
+}
+img, canvas {
+width: 100%;
+height: auto;
+}
+.image-upload > input {
+display: none;
+}
 
-    .image-upload img {
+.image-upload img {
 /* background-color: #f0f0f2; */
-	width: 100%;
-	cursor: pointer;
-    }
-    .image-upload img:before {
-	content: "UPLOAD FILE";
-    }
-    @media (max-width: 700px) {
-        main {
-            margin: 0 auto;
-            width: auto;
-        }
-    }
-    </style>    
+width: 100%;
+cursor: pointer;
+}
+.image-upload img:before {
+content: "UPLOAD FILE";
+}
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
+}
+</style>    
 
 </head>
 
 <body>
 <main id="main">
-    <h1>Example Domain</h1>
-    <p>This domain is for use in illustrative examples in documents. You may use this
-    domain in literature without prior coordination or asking for permission.</p>
-    <p>
-    <div class="image-upload">
-    <label for="fileInput">
-	    upload file
-    <input type="file" id="fileInput" accept="image/*" style="display:none;">
-    <canvas id="cvs"></canvas>
-   </label>
-    </div>
-    </p>
+<h1>Example Domain</h1>
+<p>This domain is for use in illustrative examples in documents. You may use this
+domain in literature without prior coordination or asking for permission.</p>
+<p>
+<div class="image-upload">
+<label for="fileInput">
+upload file
+<input type="file" id="fileInput" accept="image/*" style="display:none;">
+<canvas id="cvs"></canvas>
+</label>
+</div>
+</p>
 
-    <p>
-    <button type="submit" onclick="generate()" class="btn">Generate</button>
+<p>
+<button type="submit" onclick="generate()" class="btn">Generate</button>
     
-    <button onclick="download()" id="download" disabled>Download</button>
-    <button onclick="location.reload()">Reset</button>
-    </p>
+<button onclick="download()" id="download" disabled>Download</button>
+<button onclick="location.reload()">Reset</button>
+</p>
 </main>
 
-	<script>
-	let canvas = document.getElementById('cvs');
+<script>
+let canvas = document.getElementById('cvs');
 let c = canvas.getContext('2d');
 let filename = "image";
 let btnDownload = document.getElementById('download');
 let reader = new FileReader();
- let target = new Image();
- let target2 = new Image();
+let target = new Image();
+let target2 = new Image();
 let image = document.getElementById('fileInput');
 		
 c.canvas.width = 1024;
 c.canvas.height = 1024;
 
 c.fillStyle = "#ff19a7";
-    c.fillRect(0, 0, canvas.width, canvas.height);
+c.fillRect(0, 0, canvas.width, canvas.height);
     
 let download = function () {
-    link = document.createElement('a');
-    link.download = filename + '.png';
-    link.href = document.getElementById('cvs').toDataURL()
-    link.click();
+link = document.createElement('a');
+link.download = filename + '.png';
+link.href = document.getElementById('cvs').toDataURL()
+link.click();
 }
 
 let destroyInterval = () => {
-    for (var i = 1; i < 99999; i++)
-        window.clearInterval(i);
+for (var i = 1; i < 99999; i++)
+window.clearInterval(i);
 }
 
 let load = () => {
-    c.clearRect(0, 0, c.canvas.width, c.canvas.height);
-    draw();
+c.clearRect(0, 0, c.canvas.width, c.canvas.height);
+draw();
 }
 
 let draw = () => {
-    //  made reponsive twibbon
+//  made reponsive twibbon
 	
-	c.drawImage(target, 0, 0, canvas.width, canvas.height);
-        c.drawImage(target2, 0, 0, canvas.width, canvas.height);
+c.drawImage(target, 0, 0, canvas.width, canvas.height);
+c.drawImage(target2, 0, 0, canvas.width, canvas.height);
 }
 
 let enableButton = () => {
-    let
+let
 }
 
 let init = () => {
-    run = setInterval(function () {
-        load();
-    }, 1000);
+run = setInterval(function () {
+load();
+}, 1000);
 }
 
 let setTwibbon = () => {
-    target2.src = 'picture.png';
+target2.src = 'picture.png';
 }
 
 let imageReaderOnLoad = () => {
-    reader.onload = (res) => {
-        target.src = res.target.result.replace(/ +/g, "");
-    }
+reader.onload = (res) => {
+target.src = res.target.result.replace(/ +/g, "");
+}
 }
 
 let enableBtnDownload = () => {
-    btnDownload.removeAttribute('disabled');
+btnDownload.removeAttribute('disabled');
 }
 
 let generate = () => {
     	
-    if(image.files[0] === undefined) 
-        alert('Image kosong');
-    else{
-        destroyInterval();                               
-        imageReaderOnLoad();
-        setTwibbon();
-        enableBtnDownload();
-        reader.readAsDataURL(image.files[0]);
-        init();
-    }
+if(image.files[0] === undefined) 
+alert('Image kosong');
+else{
+destroyInterval();                               
+imageReaderOnLoad();
+setTwibbon();
+enableBtnDownload();
+reader.readAsDataURL(image.files[0]);
+init();
 }
-	</script>
+}
+</script>
 </body>
 </html>
