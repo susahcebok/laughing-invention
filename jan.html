@@ -92,7 +92,7 @@ c.font = '20px sans-serif';
 var textString = "Hello look at me!!!",
     textWidth = c.measureText(textString ).width;
 
-c.fillText(textString , (canvas.width/1) - (textWidth / 1), 100);
+c.fillText(textString , (c.canvas.width/1) - (c.canvas.height / 1), 100);
     
 let download = function () {
 link = document.createElement('a');
