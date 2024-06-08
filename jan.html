@@ -73,6 +73,7 @@ domain in literature without prior coordination or asking for permission.</p>
 </div>
 </p>
 
+<p id="value"></p>
 <p id="warning"></p>
 	
 <p>
@@ -163,6 +164,12 @@ reader.readAsDataURL(image.files[0]);
 init();
 }
 }
+</script>
+<script>
+$('#fileInput').on('change',function(event){
+var name = event.target.files[0].name;
+$('#value').text(name);
+ })
 </script>
 </body>
 </html>
