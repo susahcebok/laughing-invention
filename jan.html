@@ -86,10 +86,13 @@ c.canvas.width = 1024;
 c.canvas.height = 1024;
 
 // c.fillStyle = "#ff19a7";
-c.textAlign = "center";   
-c.font = "30px serif";
-c.fillText("UPLOAD FILE",150, 120);  
-c.fillRect(0, 0, canvas.width, canvas.height);
+c.fillStyle = "#003300";
+c.font = '20px sans-serif';
+
+var textString = "Hello look at me!!!",
+    textWidth = c.measureText(textString ).width;
+
+c.fillText(textString , (canvas.width/2) - (textWidth / 2), 100);
     
 let download = function () {
 link = document.createElement('a');
