@@ -51,9 +51,13 @@
     <input type="file" name="image_input" id="image_input" class="form-control">
     <button type="submit" onclick="generate()" class="btn">Generate</button>
     </p>
-    <p><div class="cvs" id="canvas" style="width:100%;height:auto;"></div></p>
+	
     <p>
-    <button onclick="download()">Download</button>
+    <div id="canvas"></div>
+    </p>
+	
+    <p>
+    <button onclick="download()" id="download" disabled>Download</button>
     <button onclick="remake()">Reset</button>
     </p>
 </main>
