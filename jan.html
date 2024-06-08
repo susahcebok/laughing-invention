@@ -86,14 +86,9 @@ c.canvas.width = 1024;
 c.canvas.height = 1024;
 
 // c.fillStyle = "#ff19a7";
-c.fillStyle = "#003300";
-c.font = '20px sans-serif';
-
-var textString = "Hello look at me!!!",
-    textWidth = c.measureText(textString ).width;
-
-c.fillText(textString , (c.canvas.width/1) - (c.canvas.height / 1), 100);
-    
+c.font = "48px serif";
+c.fillText("Hello world", 10, 50);
+	
 let download = function () {
 link = document.createElement('a');
 link.download = filename + '.png';
