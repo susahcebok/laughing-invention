@@ -69,8 +69,8 @@ let c = canvas.getContext('2d');
 let filename = "twibbon-stmj";
 let btnDownload = document.getElementById('download');
 let reader = new FileReader();
-let target = new Image();
-let target2 = new Image();
+// let target = new Image();
+// let target2 = new Image();
 let image = document.getElementById('fileInput');
 
 c.canvas.width = 1024;
@@ -95,11 +95,14 @@ let load = () => {
 
 let draw = () => {
     //  made reponsive twibbon
-    c.canvas.width = target.width;
-    c.canvas.height = target.height;
+//    c.canvas.width = target.width;
+///    c.canvas.height = target.height;
 
-    c.drawImage(target, 0, 0, target.width, target.height);
-    c.drawImage(target2, 0, 0, target.width, target.height);
+//    c.drawImage(target, 0, 0, target.width, target.height);
+//    c.drawImage(target2, 0, 0, target.width, target.height);
+
+	c.drawImage(picture, 0, 0, canvas.width, canvas.height);
+        c.drawImage(twibbon, 0, 0, canvas.width, canvas.height);
 }
 
 let enableButton = () => {
