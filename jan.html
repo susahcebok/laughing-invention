@@ -148,7 +148,9 @@ let enableBtnDownload = () => {
 }
 
 let generate = () => {
-    
+    document.getElementById("result").innerHTML =
+  '<canvas id="canvas"></canvas>';
+	
     if(image.files[0] === undefined) 
         alert('Image kosong');
     else{
