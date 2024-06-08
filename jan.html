@@ -62,7 +62,7 @@
     <label for="fileInput">
     <img src="upload.png" alt="Upload File"/>
     <input type="file" id="fileInput" accept="image/*" style="display:none;">
-    <!-- <canvas id="canvas"></canvas>-->
+    <canvas id="canvas" style="display:none;"></canvas>
     </label>
     </div>
     </p>
@@ -88,7 +88,10 @@ let reader = new FileReader();
  let target = new Image();
  let target2 = new Image();
 let image = document.getElementById('fileInput');
+document.getElementById("result").innerHTML =
+  '<canvas id="canvas"></canvas>';
 
+		
 c.canvas.width = 1024;
 c.canvas.height = 1024;
 
