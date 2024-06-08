@@ -26,12 +26,9 @@
         color: #38488f;
         text-decoration: none;
     }
-    #inputbtn {
-	display: hidden;
-    }
-    #canvas, .cvs {
+    img, canvas {
 	width: 100%;
-	object-fit: contain;
+	height: auto;
     }
     @media (max-width: 700px) {
         main {
@@ -59,73 +56,81 @@
 </main>
 
 	<script>
+	let canvas = document.getElementById('canvas');
+let c = canvas.getContext('2d');
+let filename = "twibbon-stmj";
+let btnDownload = document.getElementById('download');
+let reader = new FileReader();
+let target = new Image();
+let target2 = new Image();
+let image = document.getElementById('image_input');
 
-		function preload() {
-		   mask = loadImage('palestina.png');
-		}
+c.canvas.width = 1024;
+c.canvas.height = 1024;
 
-		function setup() {
-			var uploadBtn = createFileInput(imageUpload);
-			uploadBtn.parent('inputbtn');
-			  // create canvas
-			  var c = createCanvas(500, 500);
-			  var heightRatio = 1.5;
-			  c.height = canvas.width * heightRatio;
+let download = function () {
+    link = document.createElement('a');
+    link.download = filename + '.png';
+    link.href = document.getElementById('canvas').toDataURL()
+    link.click();
+}
 
-			  background('#fff');
-			  c.parent('canvas');
-			  // Add an event for when a file is dropped onto the canvas
-			  c.drop(gotFile);
-		}
+let destroyInterval = () => {
+    for (var i = 1; i < 99999; i++)
+        window.clearInterval(i);
+}
 
-	//	function draw() {
-	//	  fill(0);
-	//	  noStroke();
-	//	  textSize(24);
-	//	  textAlign(CENTER);
-	//	  text('Fotomu akan Muncul disini', width/2, height/2);
-	//	  noLoop();
-	//	}
+let load = () => {
+    c.clearRect(0, 0, c.canvas.width, c.canvas.height);
+    draw();
+}
 
-		function remake() {
-			background('#fff');
-			redraw();
-		}
+let draw = () => {
+    //  made reponsive twibbon
+    c.canvas.width = target.width;
+    c.canvas.height = target.height;
 
-		// function changeColor() {
-		// 	image(img, mouseX, mouseY, img.width, img.height);
-		// }
+    c.drawImage(target, 0, 0, target.width, target.height);
+    c.drawImage(target2, 0, 0, target.width, target.height);
+}
 
-		function download() {
-			saveCanvas("twibbon", 'jpg');
-		}
+let enableButton = () => {
+    let
+}
 
-		function gotFile(file) {
-		  // If it's an image file
-		  if (file.type === 'image') {
-		    // Create an image DOM element but don't show it
-		    background('#fff');
-		    redraw();
-		    var img = createImg(file.data).hide();
-		    // Draw the image onto the canvas
-		   image(img, 0, 0, width , height);
+let init = () => {
+    run = setInterval(function () {
+        load();
+    }, 1000);
+}
 
-		   
-		   image(mask, 0, 0, width, height);
-		  } else {
-		    println('Not an Photos file!');
-		  }
-		}
+let setTwibbon = () => {
+    target2.src = 'palestina.png';
+}
 
-		function imageUpload(file){
-		    img = loadImage(file.data,function(){
-		    	background('#fff');
-		    	redraw();
-		    	image(img, 0, 0, width , height);
-		        image(mask,0,0,width,height);
-		    })        
-		}
+let imageReaderOnLoad = () => {
+    reader.onload = (res) => {
+        target.src = res.target.result.replace(/ +/g, "");
+    }
+}
+
+let enableBtnDownload = () => {
+    btnDownload.removeAttribute('disabled');
+}
+
+let generate = () => {
+    
+    if(image.files[0] === undefined) 
+        alert('Image kosong');
+    else{
+        destroyInterval();                               
+        imageReaderOnLoad();
+        setTwibbon();
+        enableBtnDownload();
+        reader.readAsDataURL(image.files[0]);
+        init();
+    }
+}
 	</script>
-	
 </body>
 </html>
