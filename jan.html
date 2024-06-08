@@ -88,6 +88,9 @@ let image = document.getElementById('fileInput');
 c.canvas.width = 1024;
 c.canvas.height = 1024;
 
+c.fillStyle = "#ff19a7";
+    c.fillRect(0, 0, canvas.width, canvas.height);
+    
 let download = function () {
     link = document.createElement('a');
     link.download = filename + '.png';
