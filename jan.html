@@ -63,7 +63,7 @@
 	    upload file
     <!--<img src="upload.png" alt="Upload File"/>-->
     <input type="file" id="fileInput" accept="image/*" style="display:none;">
-    <canvas id="result"></canvas>
+    <canvas id="cvs"></canvas>
    </label>
     </div>
     </p>
@@ -77,7 +77,7 @@
 </main>
 
 	<script>
-	let canvas = document.getElementById('canvas');
+	let canvas = document.getElementById('cvs');
 let c = canvas.getContext('2d');
 let filename = "image";
 let btnDownload = document.getElementById('download');
@@ -85,9 +85,6 @@ let reader = new FileReader();
  let target = new Image();
  let target2 = new Image();
 let image = document.getElementById('fileInput');
-// document.getElementById("result").innerHTML =
-//  '<canvas id="canvas"></canvas>';
-
 		
 c.canvas.width = 1024;
 c.canvas.height = 1024;
@@ -95,7 +92,7 @@ c.canvas.height = 1024;
 let download = function () {
     link = document.createElement('a');
     link.download = filename + '.png';
-    link.href = document.getElementById('canvas').toDataURL()
+    link.href = document.getElementById('cvs').toDataURL()
     link.click();
 }
 
@@ -111,12 +108,7 @@ let load = () => {
 
 let draw = () => {
     //  made reponsive twibbon
-//    c.canvas.width = target.width;
-//    c.canvas.height = target.height;
-
-//    c.drawImage(target, 0, 0, target.width, target.height);
-//    c.drawImage(target2, 0, 0, target.width, target.height);
-
+	
 	c.drawImage(target, 0, 0, canvas.width, canvas.height);
         c.drawImage(target2, 0, 0, canvas.width, canvas.height);
 }
