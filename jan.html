@@ -29,7 +29,7 @@
     #inputbtn {
 	display: hidden;
     }
-    #canvas {
+    #canvas, .cvs {
 	width: 100%;
 	display: block;
     }
@@ -51,7 +51,7 @@
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
     <p><button id="inputbtn">Upload Fotomu Disini</button></p>
-    <p><div id="canvas" style="width:100%;height:auto;"></div></p>
+    <p><div class="cvs" id="canvas" style="width:100%;height:auto;"></div></p>
     <p>
     <button onclick="download()">Download</button>
     <button onclick="remake()">Reset</button>
@@ -68,8 +68,10 @@
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn');
 			  // create canvas
-			  var c = createCanvas(300, 300);
-			  
+			  var c = createCanvas(500, 500);
+			  var heightRatio = 1.5;
+			  c.height = canvas.width * heightRatio;
+
 			  background('#fff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
