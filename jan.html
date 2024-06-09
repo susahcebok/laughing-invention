@@ -142,6 +142,10 @@ for (var i = 1; i < 99999; i++)
 window.clearInterval(i);
 }
 
+let clearImg = () => {
+c.clearRect(0, 0, canvas.width, canvas.height);
+}
+	
 let load = () => {
 c.clearRect(0, 0, c.canvas.width, c.canvas.height);
 draw();
@@ -201,11 +205,6 @@ $('#value').text(name);
  })
 </script>
 <script>
-/ Clear image
-function clearImg() {
-  let c = canvas.getContext("2d");
-  c.clearRect(0, 0, canvas.width, canvas.height);
-}
 </script>
 </body>
 </html>
