@@ -64,7 +64,17 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
-
+.image-upload img::after {
+position: absolute;
+top: 50%;
+left: 0;
+width: 100%;
+text-align: center;
+transform: translateY(50%);
+content: "Choose a file...";
+font-style: italic;
+font-size: 1em;
+}
 .box {
 transition-duration: 0.4s; 
 border-radius: 0.5em;
