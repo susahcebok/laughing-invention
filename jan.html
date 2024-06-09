@@ -64,17 +64,6 @@ background-color: #f0f0f2;
 width: 100%;
 cursor: pointer;
 }
-.image-upload > input::after {
-position: absolute;
-top: 50%;
-left: 0;
-width: 100%;
-text-align: center;
-transform: translateY(50%);
-content: "Choose a file...";
-font-style: italic;
-font-size: 1em;
-}
 .box {
 transition-duration: 0.4s; 
 border-radius: 0.5em;
@@ -134,11 +123,10 @@ c.canvas.width = 1024;
 c.canvas.height = 1024;
 
 // c.fillStyle = "#ff19a7";
-// c.fillStyle = "url('https://susahcebok.github.io/laughing-invention/upload.png')";
-// c.textBaseline = 'middle'; 
-// c.font = "48px Arial";
-// c.textAlign = 'center'; 
-// c.fillText("UPLOAD FOTO", c.canvas.width/2, c.canvas.height/2);
+ c.textBaseline = 'middle'; 
+ c.font = "48px Arial";
+ c.textAlign = 'center'; 
+ c.fillText("UPLOAD FOTO", c.canvas.width/2, c.canvas.height/2);
 	
 let download = function () {
 link = document.createElement('a');
@@ -150,10 +138,6 @@ link.click();
 let destroyInterval = () => {
 for (var i = 1; i < 99999; i++)
 window.clearInterval(i);
-}
-
-let clearImg = () => {
-c.clearRect(0, 0, canvas.width, canvas.height);
 }
 	
 let load = () => {
