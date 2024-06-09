@@ -206,14 +206,12 @@ function doclear(){
     alert("Image is already cleared.");
   }
   else{
-    var clearImg = canvas.getContext("2d");
-    clearImg.clearRect(0,0,image.getWidth(),image.getHeight());
+    var c = canvas.getContext("2d");
+    c.clearRect(0,0,image.getWidth(),image.getHeight());
     image = null;
     alert("CLEAR the image successfully.");
   }
 }
-</script>
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
 </script>
 </body>
 </html>
