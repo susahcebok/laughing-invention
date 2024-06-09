@@ -201,12 +201,16 @@ $('#value').text(name);
  })
 </script>
 <script>
-function clearCanvas() {
-  doClear(canvas);
-}
-function doClear(canvas) {
-  let c = canvas.getContext("2d");
-  c.clearRect(0,0,canvas.width,canvas.height);
+function doclear(){
+  if(image == null){
+    alert("Image is already cleared.");
+  }
+  else{
+    var clearImg = canvas.getContext("2d");
+    clearImg.clearRect(0,0,image.getWidth(),image.getHeight());
+    image = null;
+    alert("CLEAR the image successfully.");
+  }
 }
 </script>
 </body>
