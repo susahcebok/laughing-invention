@@ -81,7 +81,6 @@ width: auto;
 }
 </style>    
 	
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 </head>
 
 <body>
@@ -107,7 +106,7 @@ domain in literature without prior coordination or asking for permission.</p>
 <p>
 <button type="submit" onclick="generate()" class="btn">Generate</button>  
 <button onclick="download()" id="download" disabled>Download</button>
-<button onclick=clearImg()>Reset</button>
+<button onclick="clearImg()">Reset</button>
 </p>
 </main>
 
@@ -204,7 +203,7 @@ $('#value').text(name);
 <script>
 / Clear image
 function clearImg() {
-  var c = canvas.getContext("2d");
+  let c = canvas.getContext("2d");
   c.clearRect(0, 0, canvas.width, canvas.height);
 }
 </script>
