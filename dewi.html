@@ -101,7 +101,7 @@ $("#download").on("click", function(e) {
   });
 
   $("#file").on("change", function() {
-    var file = document.querySelector("#upload-file").files[0];
+    var file = document.querySelector("#file").files[0];
     var reader = new FileReader();
 
     if (file) {
@@ -118,7 +118,7 @@ $("#download").on("click", function(e) {
           canvas.width = img.width;
           canvas.height = img.height;
           ctx.drawImage(img, 0, 0, img.width, img.height);
-          $("#canvas").removeAttr("data-caman-id");
+          $("#overlay-img").removeAttr("data-caman-id");
         };
       },
       false
