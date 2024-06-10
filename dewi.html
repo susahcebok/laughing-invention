@@ -42,5 +42,37 @@
     domain in literature without prior coordination or asking for permission.</p>
     <p><a href="https://www.iana.org/domains/example">More information...</a></p>
 </main>
+
+<script>
+	  var loadFile = function(event) {
+	    var reader = new FileReader();
+	    reader.onload = function() {
+	      createOverlay(reader.result);
+	    };
+	    reader.readAsDataURL(event.target.files[0]);
+	  };
+
+	var createOverlay = function(uploadImage) {
+	  	var baseImg = uploadImage;
+	  	Caman("#overlay-img", function () {
+			this.brightness(5).render();
+			this.newLayer(function() {
+			    this.setBlendingMode("normal");
+			    this.opacity(100);
+			    this.overlayImage(baseImg);
+		  	});
+
+		  	this.newLayer(function() {
+			    this.setBlendingMode("normal");
+			    this.opacity(90);
+			    this.overlayImage('overlay.png');
+		  	});
+
+		  	$('#overlay-img').removeAttr('style');
+		});
+
+		$('#overlay-img').removeAttr('style');
+	};
+	</script>
 </body>
 </html>
