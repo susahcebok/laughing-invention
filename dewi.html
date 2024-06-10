@@ -65,11 +65,12 @@ domain in literature without prior coordination or asking for permission.</p>
 <p><img id="overlay-img" src="overlay.png"/></p>
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
-<button onclick="shareCanvas()">Share</button>
+<button id="share">Share</button>
 </p>
+<p id="output"></p>
 </main>
 
-<script type="text/javascript" src="js/share.js"></script>
+<!--<script type="text/javascript" src="js/share.js"></script>-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script>
 var loadFile = function(event) {
