@@ -87,6 +87,14 @@
 	</script>
 
 	<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let img = new Image();
+let fileName = "";
+
+const downloadBtn = document.getElementById("download");
+		
 downloadBtn.addEventListener("click", () => {
   // Get ext
   const fileExtension = fileName.slice(-4);
