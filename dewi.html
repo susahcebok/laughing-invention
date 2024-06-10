@@ -50,6 +50,7 @@
     <p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /></p>	
     <p><img id="overlay-img" src="overlay.png"/></p>
     <p><button id="download" onclick="canvasToPng()">Download</button></p>
+    <p id="output"></p>
 </main>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -95,6 +96,17 @@ function canvasToPng() {
       })
   };
 
+</script>
+<script>
+$('.download').bind("click",function() { 
+  var imgVal = $('#file').val(); 
+  if(imgVal=='') 
+  { 
+    output.innerHTML = "Tidak ada file gambar yang dipilih";
+  } else {
+    output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
+  }
+}); 
 </script>
 </body>
 </html>
