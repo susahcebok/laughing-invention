@@ -116,6 +116,17 @@ link.download = "avatar.png";
 link.click();
 })
 };
+
+function clearCanvas() {
+const  canvas = document.getElementById ("canvasId");
+  var context = canvas.getContext("2d");
+  context.clearRect(0,0,canvas.width,canvas.height);
+  image = null;
+  canvas = null;
+  imgFile = null;
+}
+
+
 </script>
 <script>
 const input = document.getElementById("file");
