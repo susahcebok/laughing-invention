@@ -30,16 +30,10 @@
 	width: 100%;
 	height: auto;
     }
-    .download {
+    button {
 	margin-bottom: 0.5rem;
     }
-    .image-upload > input {
-display: none;
-}
-.image-upload img {
-width: 100%;
-cursor: pointer;
-}
+    
     @media (max-width: 700px) {
         main {
             margin: 0 auto;
@@ -56,16 +50,8 @@ cursor: pointer;
     <h1>Example Domain</h1>
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-    <p>
-<!--<input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" />-->
-    <div class="image-upload">
-<label for="file">
-<input type="file" id="file" accept="image/*" onchange="loadFile(event) style="display:none;">
-<img id="overlay-img" src="overlay.png"/>
-</label>
-</div>
-    </p>	
-   <!-- <p><img id="overlay-img" src="overlay.png"/></p>-->
+    <p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /> </p>	
+    <p><img id="overlay-img" src="overlay.png"/></p>
     <p><button id="download" onclick="canvasToPng()">Download</button></p>
     <p id="output"></p>
 </main>
