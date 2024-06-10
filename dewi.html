@@ -44,6 +44,7 @@
     domain in literature without prior coordination or asking for permission.</p>
     <p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /></p>	
     <p><img id="overlay-img" src="picture.png"/></p>
+    <p><button id="download">Download</button></p>
 </main>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -78,5 +79,20 @@
 		$('#overlay-img').removeAttr('style');
 	};
 	</script>
+
+	<script>
+document.getElementById('download').onclick = function () {
+var img = canvas.toDataURL('image/png');
+var link = document.createElement("a");
+link.download = 'image';
+link.href = img;
+link.click();
+  
+var win = window.open('', '_blank');
+win.document.write('<img style="width:100%;height:auto;" src="' + img + '" alt="Palestine Profile Pic Maker"/>');
+win.document.write('<h1 style="font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight: 300;">Right Click > Save As<h1>');
+win.document.body.style.padding = '2em';
+};
+</script>
 </body>
 </html>
