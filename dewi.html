@@ -118,24 +118,15 @@ link.click();
 })
 };
 
-// function clearCanvas() {
-// const  canvas = document.getElementById ("overlay-img");
-// var context = canvas.getContext("2d");
-// context.clearRect(0,0,canvas.width,canvas.height);
-// image = null;
-// canvas = null;
+function clearCanvas() {
+const  canvas = document.getElementById ("overlay-img");
+var context = canvas.getContext("2d");
+context.clearRect(0,0,canvas.width,canvas.height);
+ image = null;
+ canvas = null;
 // imgFile = null;
 }
 
-var canvas= document.getElementById("overlay-img");
-      newimg.drawTo(canvas)
-}
-   
-function resetimage(){
-  
- var canvas = document.getElementById("overlay-img")
-  reset.drawTo(canvas)
-} 
 </script>
 <script>
 const input = document.getElementById("file");
