@@ -68,7 +68,6 @@ domain in literature without prior coordination or asking for permission.</p>
 </main>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
 <script>
 var loadFile = function(event) {
 var reader = new FileReader();
@@ -109,18 +108,7 @@ link.download = "avatar.png";
 link.click();
 })
 };
+</script>
 
-</script>
-<script>
-$('.download').bind("click",function() { 
-var imgVal = $('#file').val(); 
-if(imgVal=='') 
-{ 
-output.innerHTML = "Tidak ada file gambar yang dipilih";
-} else {
-output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
-}
-}); 
-</script>
 </body>
 </html>
