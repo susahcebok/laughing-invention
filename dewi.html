@@ -1,121 +1,121 @@
 <!doctype html>
 <html>
 <head>
-    <title>Example Domain</title>
+<title>Example Domain</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style type="text/css">
+body {
+background-color: #f0f0f2;
+margin: 0;
+padding: 0;
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         
-    }
-    main {
-        width: 600px;
-        margin: 5em auto;
-        padding: 2em;
-        background-color: #fdfdff;
-        border-radius: 0.5em;
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    img, canvas {
-	width: 100%;
-	height: auto;
-    }
-    button {
-	font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-  border: 0;
-  outline: 0;
-    }
-    button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
-    @media (max-width: 700px) {
-        main {
-            margin: 0 auto;
-            width: auto;
-        }
-    }
-    </style>    
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
+background-color: #fdfdff;
+border-radius: 0.5em;
+box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+}
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
+}
+img, canvas {
+width: 100%;
+height: auto;
+}
+button {
+font-family: inherit;
+font-size: 100%;
+vertical-align: baseline;
+border: 0;
+outline: 0;
+}
+button::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
+}
+</style>    
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
 </head>
 
 <body>
 <main>
-    <h1>Example Domain</h1>
-    <p>This domain is for use in illustrative examples in documents. You may use this
-    domain in literature without prior coordination or asking for permission.</p>
-    <p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /> </p>	
-    <p><img id="overlay-img" src="overlay.png"/></p>
-    <p><button id="download" onclick="canvasToPng()">Download</button></p>
-    <p id="output"></p>
+<h1>Example Domain</h1>
+<p>This domain is for use in illustrative examples in documents. You may use this
+domain in literature without prior coordination or asking for permission.</p>
+<p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /> </p>	
+<p><img id="overlay-img" src="overlay.png"/></p>
+<p><button id="download" onclick="canvasToPng()">Download</button></p>
+<p id="output"></p>
 </main>
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script>
-	  var loadFile = function(event) {
-	    var reader = new FileReader();
-	    reader.onload = function() {
-	      createOverlay(reader.result);
-	    };
-	    reader.readAsDataURL(event.target.files[0]);
-	  };
+var loadFile = function(event) {
+var reader = new FileReader();
+reader.onload = function() {
+createOverlay(reader.result);
+};
+reader.readAsDataURL(event.target.files[0]);
+};
 
-	var createOverlay = function(uploadImage) {
-	  	var baseImg = uploadImage;
-	  	Caman("#overlay-img", function () {
-			this.brightness(5).render();
-			this.newLayer(function() {
-			    this.setBlendingMode("normal");
-			    this.opacity(100);
-			    this.overlayImage(baseImg);
-		  	});
+var createOverlay = function(uploadImage) {
+var baseImg = uploadImage;
+Caman("#overlay-img", function () {
+this.brightness(5).render();
+this.newLayer(function() {
+this.setBlendingMode("normal");
+this.opacity(100);
+this.overlayImage(baseImg);
+});
 
-		  	this.newLayer(function() {
-			    this.setBlendingMode("normal");
-			    this.opacity(90);
-			    this.overlayImage('picture.png');
-		  	});
+this.newLayer(function() {
+this.setBlendingMode("normal");
+this.opacity(90);
+this.overlayImage('picture.png');
+});
 
-		  	$('#overlay-img').removeAttr('style');
-		});
+$('#overlay-img').removeAttr('style');
+});
 
-		$('#overlay-img').removeAttr('style');
-	};
+$('#overlay-img').removeAttr('style');
+};
 	
 function canvasToPng() {
-    const canvas = document.getElementById('overlay-img');
-      canvas.toBlob((blob) => {
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "avatar.png";
-        link.click();
-      })
-  };
+const canvas = document.getElementById('overlay-img');
+canvas.toBlob((blob) => {
+const link = document.createElement("a");
+link.href = URL.createObjectURL(blob);
+link.download = "avatar.png";
+link.click();
+})
+};
 
 </script>
 <script>
 $('.download').bind("click",function() { 
-  var imgVal = $('#file').val(); 
-  if(imgVal=='') 
-  { 
-    output.innerHTML = "Tidak ada file gambar yang dipilih";
-  } else {
-    output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
-  }
+var imgVal = $('#file').val(); 
+if(imgVal=='') 
+{ 
+output.innerHTML = "Tidak ada file gambar yang dipilih";
+} else {
+output.innerHTML = "Anda berhasil mengunduh! Terima kasih. Jika unduhan tidak dimulai, ";
+}
 }); 
 </script>
 </body>
