@@ -135,9 +135,9 @@ $('#cvs').removeAttr('style');
 $('#cvs').removeAttr('style');
 };
 	
-function canvasToPng(event) {
+function canvasToPng(uploadImage) {
 
-if (img == null || !img.complete()) {
+if (uploadImage == null || !uploadImage.complete()) {
     alert("Image not loaded");
     return false;
   }
@@ -145,6 +145,7 @@ if (img == null || !img.complete()) {
     return true;
   }
 }
+	
 document.getElementById("share").innerHTML =
 '<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
 
