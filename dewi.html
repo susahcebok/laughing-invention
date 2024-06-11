@@ -57,8 +57,7 @@ width: auto;
 }
 </style>    
 
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script> -->
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
 </head>
 
 <body>
@@ -67,7 +66,7 @@ width: auto;
 <p>This domain is for use in illustrative examples in documents. You may use this
 domain in literature without prior coordination or asking for permission.</p>
 <p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /> </p>	
-<p><img id="overlay-img" src="overlay.png"/></p>
+<p><img id="cvs" src="overlay.png"/></p>
 <p id="output"></p>
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
@@ -89,7 +88,7 @@ reader.readAsDataURL(event.target.files[0]);
 
 var createOverlay = function(uploadImage) {
 var baseImg = uploadImage;
-Caman("#overlay-img", function () {
+Caman("#cvs", function () {
 this.brightness(5).render();
 this.newLayer(function() {
 this.setBlendingMode("normal");
@@ -103,14 +102,14 @@ this.opacity(90);
 this.overlayImage('picture.png');
 });
 
-$('#overlay-img').removeAttr('style');
+$('#cvs').removeAttr('style');
 });
 
-$('#overlay-img').removeAttr('style');
+$('#cvs').removeAttr('style');
 };
 	
 function canvasToPng() {
-const canvas = document.getElementById('overlay-img');
+const canvas = document.getElementById('cvs');
 canvas.toBlob((blob) => {
 const link = document.createElement("a");
 link.href = URL.createObjectURL(blob);
