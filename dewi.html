@@ -133,6 +133,9 @@ $('#cvs').removeAttr('style');
 };
 	
 function canvasToPng() {
+document.getElementById("share").innerHTML =
+'<button onclick="shareCanvas()">Share</button> <button onclick="location.reload()">Ganti Foto</button>';
+
 const canvas = document.getElementById('cvs');
 canvas.toBlob((blob) => {
 const link = document.createElement("a");
@@ -141,9 +144,6 @@ link.download = "avatar.png";
 link.click();
 })
 };
-
-document.getElementById("share").innerHTML =
-'<button onclick="shareCanvas()">Share</button> <button onclick="location.reload()">Ganti Foto</button>';
 	
 function clearCanvas() {
 const  canvas = document.getElementById ("cvs");
