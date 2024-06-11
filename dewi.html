@@ -103,6 +103,8 @@ domain in literature without prior coordination or asking for permission.</p>
 </main>
 
 <script type="text/javascript" src="js/share.js"></script>
+
+<!-- Canvas -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script>
 var loadFile = function(event) {
@@ -134,12 +136,11 @@ $('#cvs').removeAttr('style');
 
 $('#cvs').removeAttr('style');
 };
-	
-function canvasToPng(uploadImage) {
-	
+
+<!-- Download -->
+function canvasToPng(uploadImage) {	
 document.getElementById("share").innerHTML =
 '<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
-
 const canvas = document.getElementById('cvs');
 canvas.toBlob((blob) => {
 const link = document.createElement("a");
@@ -149,11 +150,7 @@ link.click();
 })
 };
 
-if (files.length === 0) {
-    output.textContent = "Tidak ada file yang dipilih.";
-    return;
-}
-	
+<!-- Hapus -->	
 function clearCanvas() {
 const  canvas = document.getElementById ("cvs");
 var context = canvas.getContext("2d");
