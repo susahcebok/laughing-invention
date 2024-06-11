@@ -82,6 +82,7 @@ width: auto;
 <main>
 <h1>PFP GENERATOR</h1>
 <p>Bingkai profil Anda dengan warna perlawanan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
+
 <p>
 <div class="image-upload">
 <label for="file">
@@ -134,7 +135,6 @@ $('#cvs').removeAttr('style');
 $('#cvs').removeAttr('style');
 };
 
-<!-- Download -->
 function canvasToPng() {	
 document.getElementById("share").innerHTML =
 '<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
@@ -147,7 +147,6 @@ link.click();
 })
 };
 
-<!-- Hapus -->	
 function clearCanvas() {
 const  canvas = document.getElementById ("cvs");
 var context = canvas.getContext("2d");
@@ -158,43 +157,5 @@ imgFile = null;
 }
 </script>
 
-<!--
-<script>
-const input = document.getElementById("file");
-const output = document.getElementById("output");
-
-document.getElementById("share").addEventListener("click", async () => {
-  const files = input.files;
-
-  if (files.length === 0) {
-    output.textContent = "Tidak ada file yang dipilih.";
-    return;
-  }
-
-  // feature detecting navigator.canShare() also implies
-  // the same for the navigator.share()
-  if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`;
-    return;
-  }
-
-  if (navigator.canShare({ files })) {
-    try {
-      await navigator.share({
-        files,
-        title: "Images",
-        text: "Beautiful images",
-      });
-      output.textContent = "Berhasil dibagikan!";
-    } catch (error) {
-      output.textContent = `Error: Bagikan dibatalkan!`;
-    }
-  } else {
-    output.textContent = `Your system doesn't support sharing these files.`;
-  }
-});
-
-</script>
--->
 </body>
 </html>
