@@ -76,29 +76,21 @@ width: auto;
 <h1>Example Domain</h1>
 <p>This domain is for use in illustrative examples in documents. You may use this
 domain in literature without prior coordination or asking for permission.</p>
-<!-- <p><input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" /></p> -->
+
 <p>
 <div class="image-upload">
 <label for="file">
-<!--- <div id="dropbox" aria-label="File Selection Section"> -->
 <p><img id="cvs" src="upload.png"/></p>
-</div><!-- dropbox -->
 </label>
 <input id="file" type="file" accept="image/*" onchange="loadFile(event)" style="display:none;">
 </div><!-- image-upload -->
 </p>
 	
-<!-- <p><img id="cvs" src="overlay.png"/></p> -->
 <p id="output"></p>
 
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
 <span id="share"></span>
-<!--
-<button onclick="clearCanvas()">Hapus</button>
-<button id="share">Share</button> 
-<button onclick="shareCanvas()">Share</button>
--->
 </p>
 </main>
 
