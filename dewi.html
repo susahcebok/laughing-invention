@@ -135,7 +135,16 @@ $('#cvs').removeAttr('style');
 $('#cvs').removeAttr('style');
 };
 	
-function canvasToPng() {
+function canvasToPng(event) {
+
+if (img == null || !img.complete()) {
+    alert("Image not loaded");
+    return false;
+  }
+  else {
+    return true;
+  }
+}
 document.getElementById("share").innerHTML =
 '<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
 
