@@ -70,7 +70,7 @@ domain in literature without prior coordination or asking for permission.</p>
 <p id="output"></p>
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
-<button onclick="clearFilter()">Hapus</button>
+<button onclick="clearCanvas()">Hapus</button>
 <button id="share">Share</button>
 </p>
 </main>
@@ -118,21 +118,15 @@ link.click();
 })
 };
 
-// function clearCanvas() {
-// const  canvas = document.getElementById ("overlay-img");
-// var context = canvas.getContext("2d");
-// context.clearRect(0,0,canvas.width,canvas.height);
-// image = null;
-// canvas = null;
-// imgFile = null;
-// }
-	
-function clearFilter() {
-  canvasToPng();
-//  if (imageLoaded(originalImage)) {
-//    originalImage.drawTo(canvas);
-//}
+function clearCanvas() {
+const  canvas = document.getElementById ("overlay-img");
+var context = canvas.getContext("2d");
+context.clearRect(0,0,canvas.width,canvas.height);
+image = null;
+canvas = null;
+imgFile = null;
 }
+	
 </script>
 <script>
 const input = document.getElementById("file");
