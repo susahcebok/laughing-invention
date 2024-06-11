@@ -136,15 +136,6 @@ $('#cvs').removeAttr('style');
 };
 	
 function canvasToPng(uploadImage) {
-
-if (uploadImage == null || !uploadImage.complete()) {
-    alert("Image not loaded");
-    return false;
-  }
-  else {
-    return true;
-  }
-}
 	
 document.getElementById("share").innerHTML =
 '<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
@@ -157,6 +148,11 @@ link.download = "avatar.png";
 link.click();
 })
 };
+
+if (files.length === 0) {
+    output.textContent = "Tidak ada file yang dipilih.";
+    return;
+}
 	
 function clearCanvas() {
 const  canvas = document.getElementById ("cvs");
@@ -166,7 +162,6 @@ image = null;
 canvas = null;
 imgFile = null;
 }
-	
 </script>
 
 <!--
