@@ -90,7 +90,7 @@ domain in literature without prior coordination or asking for permission.</p>
 	
 <!-- <p><img id="cvs" src="overlay.png"/></p> -->
 <p id="output"></p>
-<!-- <p id="share"></p> -->
+
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
 <span id="share"></span>
@@ -137,7 +137,7 @@ $('#cvs').removeAttr('style');
 	
 function canvasToPng() {
 document.getElementById("share").innerHTML =
-'<button onclick="shareCanvas()">Share</button> <button onclick="location.reload()">Ganti Foto</button>';
+'<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
 
 const canvas = document.getElementById('cvs');
 canvas.toBlob((blob) => {
