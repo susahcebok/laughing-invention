@@ -19,7 +19,6 @@ a:link, a:visited {
 color: #38488f;
 text-decoration: none;
 }
-/*
 img, canvas {
 background-image: url('https://susahcebok.github.io/laughing-invention/pilihfile.png');
 background-repeat: no-repeat;
@@ -31,11 +30,6 @@ height: auto;
 img:hover, canvas:hover {
 opacity: 0.6;
 cursor: not-allowed;
-}
-*/
-img, canvas {
-width: 100%; 
-height: auto;
 }
 .image-upload > input {
 display: none;
@@ -63,31 +57,6 @@ padding: 0;
 button:hover {
 opacity: 0.6;
 cursor: not-allowed;
-}
-.upload {
-  position: relative;
-  width: 100%;
-  height: auto;
-  border: 2px dashed silver;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: silver;
-  margin-bottom: 5px;
-}
-.upload::before {
-  content: "Choose or Drag & Drop Files";
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: silver;
-  margin-bottom: 5px;
-}
-.upload.active {
-  background-color: rgba(192, 192, 192, 0.2);
 }
 @media (max-width: 700px) {
 main {
