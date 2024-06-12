@@ -157,5 +157,22 @@ imgFile = null;
 }
 </script>
 
+<script>
+// Referneces
+var control = $("#file"),
+    clearBn = $("#clear");
+
+// Setup the clear functionality
+clearBn.on("click", function(){
+    control.replaceWith( control.val('').clone( true ) );
+});
+
+// Some bound handlers to preserve when cloning
+control.on({
+    change: function(){ console.log( "Changed" ) },
+     focus: function(){ console.log(  "Focus"  ) }
+});
+</script>
+
 </body>
 </html>
