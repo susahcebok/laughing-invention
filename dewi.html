@@ -26,7 +26,7 @@
 </p>
 <p id="output"></p>
 <p>
-<button id="download" onclick="canvasToPng()">Download</button>
+<button id="download" onclick="canvasToPng()" disabled>Download</button>
 <span id="share"></span>
 </p>
 </main>
@@ -38,15 +38,18 @@
 
 <script>
 let clickButton = document.getElementById("download");
-let output = document.getElementById("output");
-      function canvasToPng() {
-         let files = $("#file")[0].files.length;
-         if (files != 0) {
-            output.innerHTML += "File is selected! <br/>";
+      let fileInput = document.getElementById("file");
+      fileInput.addEventListener("change", function () {
+         
+         // check if the file is selected or not
+         if (fileInput.files.length == 0) {
+            clickButton.disabled = true;
+            clickButton.opacity = 0.3;
          } else {
-            output.innerHTML += "Please, select a file!<br>";
+            clickButton.disabled = false;
+            clickButton.style.opacity = 1;
          }
-      }
+      });
 </script>
 </body>
 </html>
