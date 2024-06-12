@@ -38,23 +38,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <!--
 <script>
-let clickButton = document.getElementById("download");
-      let fileInput = document.getElementById("file");
-      fileInput.addEventListener("change", function () {
-         
-         // check if the file is selected or not
-         if (fileInput.files.length == 0) {
-            clickButton.disabled = true;
-            clickButton.opacity = 0.3;
-         } else {
-            clickButton.disabled = false;
-            clickButton.style.opacity = 1;
-         }
-      });
-</script>
--->
-
-<script>
  $('#download').bind("click",function() 
     { 
 	    var imgVal = $('#file').val(); 
@@ -70,5 +53,6 @@ let clickButton = document.getElementById("download");
 	    }
     }); 
 </script>
+-->
 </body>
 </html>
