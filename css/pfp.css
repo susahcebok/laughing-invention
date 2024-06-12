@@ -76,7 +76,7 @@ cursor: not-allowed;
   color: silver;
   margin-bottom: 5px;
 }
-.upload:before {
+.upload::before {
   content: "Choose or Drag & Drop Files";
   position: relative;
   display: flex;
