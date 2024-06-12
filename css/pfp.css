@@ -76,6 +76,19 @@ cursor: not-allowed;
   color: silver;
   margin-bottom: 5px;
 }
+.upload:before {
+  content: "Choose or Drag & Drop Files";
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 2px dashed silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: silver;
+  margin-bottom: 5px;
+}
 .upload.active {
   background-color: rgba(192, 192, 192, 0.2);
 }
