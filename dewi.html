@@ -29,9 +29,7 @@
 
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
-<!-- <span id="share"></span> -->
-<button onclick="shareCanvas()">Share</button>
-<button id="clear">Clear</button>
+<span id="share"></span>
 </p>
 </main>
 
@@ -83,32 +81,14 @@ link.click();
 };
 
 
-// function clearCanvas() {
-// const  canvas = document.getElementById ("cvs");
-// var context = canvas.getContext("2d");
-// context.clearRect(0,0,canvas.width,canvas.height);
-// image = null;
-// canvas = null;
-// imgFile = null;
-// }
-
-</script>
-
-<script>
-// Referneces
-var control = $("#file"),
-    clearBn = $("#clear");
-
-// Setup the clear functionality
-clearBn.on("click", function(){
-    control.replaceWith( control.val('').clone( true ) );
-});
-
-// Some bound handlers to preserve when cloning
-control.on({
-    change: function(){ console.log( "Changed" ) },
-     focus: function(){ console.log(  "Focus"  ) }
-});
+function clearCanvas() {
+const  canvas = document.getElementById ("cvs");
+var context = canvas.getContext("2d");
+context.clearRect(0,0,canvas.width,canvas.height);
+image = null;
+canvas = null;
+imgFile = null;
+}
 </script>
 
 </body>
