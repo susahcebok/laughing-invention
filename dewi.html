@@ -38,20 +38,20 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script>
- $('#download').bind("click",function() 
-    { 
-	    var imgVal = $('#file').val(); 
-	    if(imgVal=='') 
-	    { 
-		    output.innerHTML = "empty input file";
-		    // alert("empty input file"); 
-	    } 
-	    else
-	    {
-		    output.innerHTML = "file fill in";
-		    // alert('file fill in');
-	    }
-    }); 
+$('#download').bind("click",function() 
+{ 
+var imgVal = $('#file').val(); 
+if(imgVal=='') 
+{ 
+output.innerHTML = "empty input file";
+// alert("empty input file"); 
+} 
+else
+{
+output.innerHTML = "file fill in";
+// alert('file fill in');
+}
+}); 
 </script>
 
 </body>
