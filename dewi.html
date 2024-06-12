@@ -34,15 +34,29 @@
 <h1>PFP GENERATOR</h1>
 
 <div class="row">
-<div class="column" style="background-color:#aaa;">
+<div class="column">
 <h2>Column 1</h2>
-<p>Some text..</p>
+<p>Bingkai profil Anda dengan warna perlawanan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
+<p>
+<div class="image-upload">
+<label for="file">
+<p><img id="cvs" src="pilihfile.png"/></p>
+</label>
+<input id="file" type="file" accept="image/*" onchange="loadFile(event)" style="display:none;">
+</div><!-- image-upload -->
+</p>
+<p>
+<button id="download" onclick="canvasToPng()">Download</button>
+<span id="share"></span>
+</p>
 </div>
 <div class="column" style="background-color:#bbb;">
 <h2>Column 2</h2>
 <p>Some text..</p>
 </div>
 </div>
+
+<!--
 <p>Bingkai profil Anda dengan warna perlawanan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
 
 <p>
@@ -60,6 +74,7 @@
 <button id="download" onclick="canvasToPng()">Download</button>
 <span id="share"></span>
 </p>
+-->
 </main>
 
 <script type="text/javascript" src="js/share.js"></script>
