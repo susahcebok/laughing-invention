@@ -14,17 +14,18 @@
 <body>
 <main>
 <h1>PFP GENERATOR</h1>
+	
 <p>Bingkai profil Anda dengan warna perlawanan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
 
-<p>
 <div class="image-upload">
-<label for="file" class="upload">
+<label for="file">
 <p><img id="cvs" src="pilihfile.png"></p>
-</label>
 <input id="file" type="file" accept="image/*" onchange="loadFile(event)" style="display:none;">
+</label>
 </div>
-</p>
+
 <p id="output"></p>
+	
 <p>
 <button id="download" onclick="canvasToPng()" disabled>Download</button>
 <span id="share"></span>
