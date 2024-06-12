@@ -24,7 +24,7 @@
 <input id="file" type="file" accept="image/*" onchange="loadFile(event)" style="display:none;">
 </div>
 </p>
-
+<p id="output"></p>
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
 <span id="share"></span>
@@ -37,6 +37,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script>
+let clickButton = document.getElementById("download");
 let output = document.getElementById("output");
       function canvasToPng() {
          let files = $("#file")[0].files.length;
