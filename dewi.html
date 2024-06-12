@@ -27,7 +27,7 @@
 <p id="output"></p>
 	
 <p>
-<button id="download" onclick="canvasToPng()" disabled>Download</button>
+<button id="download" onclick="canvasToPng()">Download</button>
 <span id="share"></span>
 </p>
 </main>
@@ -36,7 +36,7 @@
 <!-- Canvas -->
 <script type="text/javascript" src="js/pfp.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
+<!--
 <script>
 let clickButton = document.getElementById("download");
       let fileInput = document.getElementById("file");
@@ -51,6 +51,27 @@ let clickButton = document.getElementById("download");
             clickButton.style.opacity = 1;
          }
       });
+</script>
+-->
+
+<script>
+ $('#download').bind("click",function() 
+    { 
+ 
+   
+        var imgVal = $('#file').val(); 
+        if(imgVal=='') 
+        { 
+            alert("empty input file"); 
+
+        } 
+       else
+         {
+           alert('file fill in');
+         }
+   
+
+    }); 
 </script>
 </body>
 </html>
