@@ -79,9 +79,6 @@ cursor: not-allowed;
 .upload:before {
   content: "Choose or Drag & Drop Files";
   position: relative;
-  width: 100%;
-  height: auto;
-  border: 2px dashed silver;
   display: flex;
   justify-content: center;
   align-items: center;
