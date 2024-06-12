@@ -62,12 +62,14 @@ let clickButton = document.getElementById("download");
         var imgVal = $('#file').val(); 
         if(imgVal=='') 
         { 
-            alert("empty input file"); 
+		output.innerHTML = "empty input file";
+           // alert("empty input file"); 
 
         } 
        else
          {
-           alert('file fill in');
+		 output.innerHTML = "file fill in";
+          // alert('file fill in');
          }
    
 
