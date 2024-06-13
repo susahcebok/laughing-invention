@@ -103,8 +103,20 @@ border-left:2px solid #59b89c;
 main p {
 color:#333;
 }
-.devinfo-container{border:1px solid #ddd;border-radius:4px;padding:2rem;display:flex;flex-direction:column;margin-bottom:32px}
-.error-code{margin:0;font-size:1.6rem;color:#000;margin-bottom:1.6rem}
+.devinfo-container {
+border:1px solid #ddd;
+border-radius:4px;
+padding:2rem;
+display:flex;
+flex-direction:column;
+margin-bottom:32px;
+}
+.error-code {
+margin:0;
+font-size:1.6rem;
+color:#000;
+margin-bottom:1.6rem;
+}
 .devinfo-line{color:#333}
 .devinfo-line code,code,li{color:#000}
 .devinfo-line:not(:last-child){margin-bottom:8px}
@@ -153,7 +165,7 @@ img, canvas{width:100%;height:auto;}
 </code>
 </span>
 
-<p id="output" class="error-title-guilty"></p>
+<p id="output" class="error-code"></p>
 	
 <p>
 <button id="download" onclick="canvasToPng()">Download</button>
