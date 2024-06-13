@@ -219,6 +219,25 @@ win.document.body.style.padding = '2em';
 </script>
 
 <script>
+let song;
+
+function setup() {
+  song = loadSound('https://cdn.glitch.com/ce69db36-acda-4006-b5ff-676dca4d95ba%2FCat%20Choir.mp3?v=1608328030444');
+  createCanvas(720, 200);
+  background(255, 0, 0);
+}
+
+function mousePressed() {
+  if (song.isPlaying()) {
+    // .isPlaying() returns a boolean
+    song.stop();
+    background(255, 0, 0);
+  } else {
+    song.play();
+    background(0, 255, 0);
+  }
+}
+
 let song, analyzer;
 let started = false;
 function preload() {
