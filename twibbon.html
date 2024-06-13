@@ -90,33 +90,24 @@
 
 
 <script>
-let song, analyzer;
-
+let song;
 function preload() {
-  song = loadSound('https://susahcebok.github.io/laughing-invention/kemarin.mp3');
+  song = loadSound('assets/lucky_dragons_-_power_melody.mp3');
 }
-
 function setup() {
-//  createCanvas();
-  song.loop();
-
-  // create a new Amplitude analyzer
-//  analyzer = new p5.Amplitude();
-
-  // Patch the input to an volume analyzer
-//  analyzer.setInput(song);
+  createCanvas(710, 200);
+  song.loop(); // song is ready to play during setup() because it was loaded during preloa
+//    background(0, 255, 0);
 }
-
-function draw() {
-//  background(255);
-
-  // Get the average (root mean square) amplitude
-//  let rms = analyzer.getLevel();
-//  fill(127);
-//  stroke(0);
-
-  // Draw an ellipse with size based on volume
-//  ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
+function mousePressed() {
+  if (song.isPlaying()) {
+    // .isPlaying() returns a boolean
+    song.pause(); // .play() will resume from .pause() position
+//    background(255, 0, 0);
+  } else {
+    song.play();
+//    background(0, 255, 0);
+  }
 }
 </script>
     
