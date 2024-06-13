@@ -36,14 +36,14 @@ background:#79ffe1;
 ::-moz-selection {
 background:#79ffe1;
 }
-a {
+a, button {
 cursor:pointer;
 color:#0070f3;
 text-decoration:none;
 transition:all .2s ease;
 border-bottom:1px solid #0000;
 }
-a:hover {
+a:hover, button:hover {
 border-bottom:1px solid #0070f3;
 }
 ul {
@@ -258,7 +258,7 @@ height:auto;
 <p id="output" class="error-code"></p>
 	
 <p>
-<button id="download" onclick="canvasToPng()">Download</button>
+<button id="download" onclick="canvasToPng()" class=note>Download</button>
 <span id="share"></span>
 </p>
         
