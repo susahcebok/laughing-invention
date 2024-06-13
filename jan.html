@@ -219,25 +219,164 @@ win.document.body.style.padding = '2em';
 </script>
 
 <script>
+Cookies
+The p5.js Editor uses cookies. Some are essential to the website functionality and allow you to manage an account and preferences. Others are not essential—they are used for analytics and allow us to learn more about our community. We never sell this data or use it for advertising. You can decide which cookies you would like to allow, and learn more in our Privacy Policy.
+
+
+Allow All
+
+Allow Essential
+File
+Edit
+Sketch
+Help
+English
+Log in
+or
+Sign up
+
+
+
+Auto-refresh
+
+sound input demo
+by khanniie
+
+
+
+sketch.js
+1
 let song, analyzer;
+2
 let started = false;
+3
+​
+4
 function preload() {
-song = loadSound('https://cdn.glitch.com/ce69db36-acda-4006-b5ff-676dca4d95ba%2FCat%20Choir.mp3?v=1608328030444');
+5
+  song = loadSound('https://cdn.glitch.com/ce69db36-acda-4006-b5ff-676dca4d95ba%2FCat%20Choir.mp3?v=1608328030444');
+6
 }
+7
+​
+8
 function setup() {
-let can = createCanvas(600, 600);
-// create a new Amplitude analyzer
-analyzer = new p5.Amplitude();
-// set the song you loaded earlier as input
-analyzer.setInput(song);
-// just some fills and styles
-textSize(24);
-fill("red");
-background(255, 230, 230);
-stroke('black');
-//tell people you need to click to start
+9
+  let can = createCanvas(600, 600);
+10
+​
+11
+  // create a new Amplitude analyzer
+12
+  analyzer = new p5.Amplitude();
+13
+​
+14
+  // set the song you loaded earlier as input
+15
+  analyzer.setInput(song);
+16
+​
+17
+  // just some fills and styles
+18
+  textSize(24);
+19
+  fill("red");
+20
+  background(255, 230, 230);
+21
+  stroke('black');
+22
+​
+23
+  //tell people you need to click to start
+24
+  text("Click to start", width / 2 - 70, height / 4)
+25
+}
+26
+​
+27
+//start the song on mouse click
+28
+function mouseClicked() {
+29
+  if (!started) {
+30
+    song.loop();
+31
+    started = true;
+32
+  }
+33
+}
+34
+​
+35
+function draw() {
+36
+​
+37
+  //we can't start the song until
+38
+  //the player clicks on the page
+39
+  if (!started) {
+40
+    return;
+41
+  }
+42
+​
+43
+  background(255, 230, 230);
+44
+​
+45
+  // Get the average (root mean square) amplitude
+46
+  let rms = analyzer.getLevel();
+47
+​
+48
+  let circleDiameter = map(rms, 0, 1, 20, 400);
+49
+  circle(width / 2, height / 2, circleDiameter);
+50
+  
+51
+  
+52
+  // uncomment the block below if you want 
+53
+  // to see how mouse position can change the sound
+54
+​
+55
+  // let volume = map(mouseY, 0, height, 1.5, 0.3);
+56
+  // volume = constrain(volume, 0.3, 1.5)
+57
+  // song.amp(volume);
+58
+  // let speed = map(mouseX, 0, width, 0.9, 1.15);
+59
+  // speed = constrain(speed, 0.9, 1.15)
+60
+  // song.rate(speed);
+61
+​
+62
+}
 There are no lint messages
 Current line
+
+Console
+Clear
+
+Preview
+
 </script>
 </body>
 </html>
