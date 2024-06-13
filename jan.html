@@ -219,56 +219,13 @@ win.document.body.style.padding = '2em';
 </script>
 
 <script>
-Cookies
-The p5.js Editor uses cookies. Some are essential to the website functionality and allow you to manage an account and preferences. Others are not essential—they are used for analytics and allow us to learn more about our community. We never sell this data or use it for advertising. You can decide which cookies you would like to allow, and learn more in our Privacy Policy.
-
-
-Allow All
-
-Allow Essential
-
-sound input demo
-by khanniie
-
-
-File
-New
-Save
-Examples
-Edit
-Tidy Code
-Find
-Sketch
-Add File
-Add Folder
-Settings
-Preferences
-Language
-Help
-Keyboard Shortcuts
-Reference
-About
-
-
-sketch.js
-1
 let song, analyzer;
-2
 let started = false;
-3
-​
-4
 function preload() {
-5
-  song = loadSound('https://cdn.glitch.com/ce69db36-acda-4006-b5ff-676dca4d95ba%2FCat%20Choir.mp3?v=1608328030444');
-6
+song = loadSound('https://cdn.glitch.com/ce69db36-acda-4006-b5ff-676dca4d95ba%2FCat%20Choir.mp3?v=1608328030444');
 }
-7
-​
-8
 function setup() {
-9
-  let can = createCanvas(600, 600);
+let can = createCanvas(600, 600);
 // create a new Amplitude analyzer
 analyzer = new p5.Amplitude();
 // set the song you loaded earlier as input
