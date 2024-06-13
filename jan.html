@@ -97,13 +97,11 @@ width: auto;
 <p>Bingkai profil Anda dengan warna Palestina. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
 	
 <p>
-<div class="box">
 <div class="image-upload">
 <label for="fileInput">
 <input type="file" id="fileInput" accept="image/*" style="display:none;">
 <canvas id="cvs"></canvas>
 </label>
-</div>
 </div>
 </p>
 	
@@ -200,6 +198,9 @@ setTwibbon();
 enableBtnDownload();
 reader.readAsDataURL(image.files[0]);
 init();
+
+document.getElementById("share").innerHTML =
+'<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
 }
 }
 </script>
