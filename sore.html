@@ -30,10 +30,22 @@ max-height:100vh;
 max-height:-webkit-fill-available;
 margin:0;
 }
-::selection{background:#79ffe1}
-::-moz-selection{background:#79ffe1}
-a{cursor:pointer;color:#0070f3;text-decoration:none;transition:all .2s ease;border-bottom:1px solid #0000}
-a:hover{border-bottom:1px solid #0070f3}
+::selection {
+background:#79ffe1;
+}
+::-moz-selection {
+background:#79ffe1;
+}
+a {
+cursor:pointer;
+color:#0070f3;
+text-decoration:none;
+transition:all .2s ease;
+border-bottom:1px solid #0000;
+}
+a:hover {
+border-bottom:1px solid #0070f3;
+}
 ul{padding:0;margin-left:1.5em;list-style-type:none}
 li{margin-bottom:10px}
 ul li:before{content:'\02013'}
@@ -84,12 +96,10 @@ img, canvas{width:100%;height:auto;}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
 <div class=container>
 <main>
-<p>Bingkai profil Anda dengan warna perlawanan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
-
 <h1>
 <strong>PFP</strong>: GENERATOR
 </h1>
-
+<p>Bingkai profil Anda dengan warna perlawanan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.</p>
 
 <div class="image-upload">
 <label for="file">
@@ -99,7 +109,6 @@ img, canvas{width:100%;height:auto;}
 </div>
 </code>
 </span>
-        
 
 <p id="output"></p>
 	
@@ -107,13 +116,13 @@ img, canvas{width:100%;height:auto;}
 <button id="download" onclick="canvasToPng()">Download</button>
 <span id="share"></span>
 </p>
-  
-      
+        
 <a href=https://vercel.com/docs/errors/platform-error-codes#deployment_not_found class=owner-error>
 <div class=note>This deployment cannot be found. For more information and troubleshooting, see our documentation.</div>
 </a>
 </main>
 </div>
+	
 <script type="text/javascript" src="js/share.js"></script>
 <!-- Canvas -->
 <script type="text/javascript" src="js/pfp.js"></script>
