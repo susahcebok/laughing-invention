@@ -204,6 +204,15 @@ document.getElementById("share").innerHTML =
 '<button onclick="clearCanvas()">Hapus</button> <button onclick="shareCanvas()">Share</button>';
 }
 }
+
+function clearCanvas() {
+const  canvas = document.getElementById ("cvs");
+var context = canvas.getContext("2d");
+context.clearRect(0,0,canvas.width,canvas.height);
+image = null;
+canvas = null;
+imgFile = null;
+}
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
