@@ -188,7 +188,7 @@ btnDownload.removeAttribute('disabled');
 let generate = () => {
     	
 if(image.files[0] === undefined) 
-warning.innerHTML = "Gambar kosong! ";
+warning.innerHTML = "Tidak ada file yang dipilih!";
 else{
 destroyInterval();                               
 imageReaderOnLoad();
