@@ -92,3 +92,24 @@
       </a>
     </main>
   </div>
+<script type="text/javascript" src="js/share.js"></script>
+<!-- Canvas -->
+<script type="text/javascript" src="js/pfp.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script>
+$('#download').bind("click",function() 
+{ 
+var imgVal = $('#file').val(); 
+if(imgVal=='') 
+{ 
+output.innerHTML = "Silakan pilih file!";
+// alert("empty input file"); 
+} 
+else
+{
+output.innerHTML = "File dipilih!";
+// alert('file fill in');
+}
+}); 
+</script>
